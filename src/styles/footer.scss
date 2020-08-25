@@ -1,0 +1,28 @@
+@import "core";
+
+.footer {
+  height: 9rem;
+  background: $clr-blue-4;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-family: $ff-secondary;
+}
+.footer h4 {
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.footer h4 span {
+  color: #2caeba;
+}
+.footer-links {
+  margin: 0 auto 1rem auto;
+}
+.footer .social-link {
+  color: white;
+}
+.footer .social-link:hover {
+  color: #2caeba;
+}

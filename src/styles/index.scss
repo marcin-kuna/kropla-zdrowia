@@ -1,0 +1,24 @@
+@import "core";
+
+.hero {
+  margin-top: -5rem;
+  padding-top: 5rem;
+  height: 100vh;
+  width: 100%;
+  background: $clr-blue-4;
+  color: $clr-white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-center {
+  width: 100%;
+  height: 100%;
+  margin-top: -2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
