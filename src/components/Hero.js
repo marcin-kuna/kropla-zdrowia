@@ -1,6 +1,4 @@
 import React from "react"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import BackgroundImage from "gatsby-background-image"
@@ -33,6 +31,7 @@ const Hero = () => {
       <div className="hero-center">
         <h1>Kropla Zdrowia</h1>
         <h3>Sport – Przygoda – Wypoczynek</h3>
+        <div className="hero-line"></div>
         <SocialLinks />
       </div>
     </BackgroundImage>

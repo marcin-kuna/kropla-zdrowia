@@ -9,7 +9,7 @@
   color: $clr-white;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: bottom left;
   background-repeat: no-repeat;
 }
 
@@ -21,4 +21,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero-line {
+  width: 20rem;
+  height: 1px;
+  background-color: $clr-white;
+  margin: 0.5rem 0;
 }
