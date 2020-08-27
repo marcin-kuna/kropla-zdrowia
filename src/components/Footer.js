@@ -4,7 +4,7 @@ import "../styles/footer.scss"
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer bg-navy">
       <div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
         <h4>
