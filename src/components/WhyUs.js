@@ -9,12 +9,15 @@ const query = graphql`
     allContentfulWhyUs(sort: { fields: contentfulid, order: ASC }) {
       nodes {
         title
-        icon {
+        image {
           fluid {
             ...GatsbyContentfulFluid
           }
         }
-        description
+        description {
+          description
+        }
+        description2
         contentfulid
         id
       }
@@ -27,8 +30,12 @@ const WhyUs = () => {
     allContentfulWhyUs: { nodes: informations },
   } = useStaticQuery(query)
   const [value, setValue] = React.useState(1)
-  const { description, icon } = informations[value]
-  console.log(informations.contentfulid)
+  const {
+    description: { description },
+    image,
+    description2,
+  } = informations[value]
+
   return (
     <section className="about section">
       <h2 className="section-title">
@@ -53,14 +60,17 @@ const WhyUs = () => {
           })}
         </div>
         <div className="about-info">
-          <p className="about-text">{description}</p>
+          <div className="text-container">
+            <p className="description-top">{description}</p>
+            <p className="description-bottom">{description2}</p>
+          </div>
           <div className="image-container">
             {informations.map((item, index) => {
               return (
                 <Image
                   key={item.contentfulid}
-                  fluid={item.icon.fluid}
-                  className={`about-icon ${index === value && "active-icon"}`}
+                  fluid={item.image.fluid}
+                  className={`about-image ${index === value && "active-image"}`}
                   style={{
                     position: "absolute",
                     top: "0",
@@ -71,7 +81,6 @@ const WhyUs = () => {
               )
             })}
           </div>
-          {/* <Image fluid={icon.fluid} className="about-icon" /> */}
           {/* <p className="about-text">{description}</p> */}
         </div>
       </div>
