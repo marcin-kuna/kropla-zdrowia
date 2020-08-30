@@ -1,7 +1,7 @@
 @import "core";
 
 .about .section-title {
-  color: $clr-blue-2;
+  color: $blue-3;
 }
 
 .section-title span {
@@ -27,7 +27,7 @@
   opacity: 0.1;
   z-index: 1;
   transition: opacity 0.8s ease-in;
-  border-radius: $radius;
+  // border-radius: $radius;
   // box-shadow: 0px 0px 31px 10px rgba(153, 153, 153, 1);
 }
 
@@ -63,11 +63,11 @@
   font-weight: bold;
   font-family: $ff-primary;
   outline: none;
-  color: $clr-grey-2;
+  color: $grey-2;
   position: relative;
 }
 .about-btn:hover {
-  color: $clr-blue-1;
+  color: $blue-1;
 }
 .btn-container button:first-of-type::after {
   content: "";
@@ -77,24 +77,24 @@
   right: 0;
   height: 0.5em;
   width: 280px;
-  border-top: 0.1rem solid $clr-grey-2;
+  border-top: 0.1rem solid $grey-2;
   z-index: -1;
 }
 .active-btn {
-  color: $clr-blue-1;
+  color: $blue-1;
 }
 
 .dot {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: $clr-grey-2;
+  background-color: $grey-2;
   transition: $transition;
   margin: 10px auto 0;
 }
 
 .active-btn .dot {
-  background-color: $clr-white;
+  background-color: $white;
   box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.75);
 }
 
@@ -111,7 +111,7 @@
 }
 
 .active-btn .minidot {
-  background-color: $clr-blue-2;
+  background-color: $blue-2;
 }
 
 @media screen and (min-width: 992px) {

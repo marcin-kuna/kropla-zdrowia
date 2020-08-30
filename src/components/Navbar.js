@@ -1,6 +1,6 @@
 import React from "react"
-import logo from "../images/logo.png"
-import { FaAlignRight } from "react-icons/fa"
+import logo from "../images/logo-3.png"
+import { CgMenuRightAlt } from "react-icons/cg"
 import PageLinks from "../constants/links"
 import "../styles/navbar.scss"
 
@@ -9,9 +9,9 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="Logo Kropli Zdrowia" />
+          <img src={logo} alt="Logo Kropli Zdrowia - niebieska kropla" />
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
-            <FaAlignRight></FaAlignRight>
+            <CgMenuRightAlt></CgMenuRightAlt>
           </button>
         </div>
         <PageLinks styleClass="nav-links"></PageLinks>
