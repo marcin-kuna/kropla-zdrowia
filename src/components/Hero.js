@@ -2,10 +2,11 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import BackgroundImage from "gatsby-background-image"
+import WaveUnderline from "../images/wave-long.svg"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "hero-3.jpg" }) {
+    file(relativePath: { eq: "hero-2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
@@ -30,8 +31,9 @@ const Hero = () => {
     >
       <div className="hero-center">
         <h1>Kropla Zdrowia</h1>
-        <h3>Sport – Przygoda – Wypoczynek</h3>
-        <div className="hero-line"></div>
+        <h3>Sport / Przygoda / Wypoczynek</h3>
+        {/* <div className="hero-line"></div> */}
+        <img src={WaveUnderline} alt="" className="wave-underline" />
         <SocialLinks />
       </div>
     </BackgroundImage>

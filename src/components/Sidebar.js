@@ -11,6 +11,25 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <CgClose></CgClose>
       </button>
       <div>
+        <div className="wave-top">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style={{
+              height: "100%",
+              width: "100%",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              zIndex: "-1",
+            }}
+          >
+            <path
+              d="M-2.31,28.91 C232.11,20.03 264.62,79.24 501.37,59.50 L499.07,150.00 L0.00,150.00 Z"
+              style={{ stroke: "none", fill: "#08f" }}
+            ></path>
+          </svg>
+        </div>
         <Links styleClass={`${isOpen ? "sidebar-links" : ""}`} />
         <SocialLinks styleClass={`${isOpen ? "sidebar-icons" : ""}`} />
       </div>
