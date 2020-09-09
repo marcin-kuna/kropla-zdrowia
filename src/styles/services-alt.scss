@@ -8,7 +8,8 @@
 }
 
 .services {
-  background-color: $grey-1;
+  // background-color: $grey-1;
+  background-color: $blue-2;
 }
 
 .title-container {
@@ -19,7 +20,7 @@
   // background-color: yellow;
 
   .section-title {
-    color: $blue-3;
+    color: $blue-4;
     // text-align: left;
     // box-shadow: 4px 0 $blue-3;
     letter-spacing: normal;
@@ -75,6 +76,7 @@
 
 .service-img {
   height: 19rem;
+  z-index: 10;
 }
 
 .service-img::after {

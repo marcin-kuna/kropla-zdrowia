@@ -6,6 +6,9 @@
   display: grid;
   place-items: center;
   font-family: $ff-primary;
+  // background-color: $blue-4;
+  background: url("../assets/images/sand.png");
+  background-color: #f2f254;
 }
 .footer h4 {
   margin-top: 0.5rem;

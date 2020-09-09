@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
-import "../styles/index.scss"
 import Hero from "../components/Hero"
 import WhyUs from "../components/WhyUs"
 import Services from "../components/Services"
-// import Stats from "../components/Stats"
+// import "../styles/index.scss"
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <Hero />
       <WhyUs />
       <Services />
-      {/* <Stats /> */}
     </Layout>
   )
 }

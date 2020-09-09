@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../images/logo-3.png"
+import logo from "../assets/images/logo-3.png"
 import { CgMenuRightAlt } from "react-icons/cg"
 import PageLinks from "../constants/links"
 import "../styles/navbar.scss"

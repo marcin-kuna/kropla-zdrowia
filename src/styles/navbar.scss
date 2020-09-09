@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   z-index: 100;
+  // font-family: $ff-test;
+  // background-color: #08f;
 }
 
 .nav-center {
@@ -65,7 +67,7 @@
     a {
       text-transform: capitalize;
       color: $white;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: bold;
       letter-spacing: $spacing;
       transition: $transition;

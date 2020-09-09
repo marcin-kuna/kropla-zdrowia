@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@400;700&family=Raleway:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Nunito:wght@400;700&family=Quicksand:wght@400;700&family=Rubik:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow+Semi+Condensed:wght@400;700&family=Kanit:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@400;700&display=swap");
+
 // font-family: 'Noto Sans', sans-serif;
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Raleway', sans-serif;
@@ -13,24 +17,37 @@
 // font-family: 'Barlow Condensed', sans-serif;
 // font-family: 'Barlow Semi Condensed', sans-serif;
 // font-family: 'Kanit', sans-serif;
+// font-family: 'Palanquin Dark', sans-serif;
+// "Balsamiq Sans", cursive;
+// font-family: 'Lemonada', cursive;
+
+// 1A6AFF, 004EDF, 003AA6, 00266C, 001233, 00102D, 000D26, 000B20
 
 $white: #ffffff;
 $grey-1: #f3f5f8;
 $grey-2: #a5aab1;
 // $blue-1: #3775e9;
-$blue-1: #3e92cc;
+$blue-1: #1a6aff;
 // $blue-2: #0046a7;
-$blue-2: #2a628f;
+$blue-2: #004edf;
 // $blue-3: #07254f;
-$blue-3: #16324f;
+$blue-3: #003aa6;
 // $blue-4: #041329;
-$blue-4: #13293d;
-$blue-5: #18435a;
-$ff-primary: "Barlow Condensed", sans-serif;
-$ff-secondary: "Open Sans", sans-serif;
+$blue-4: #00266c;
+$blue-5: #001233;
+$yellow-1: #ffd500;
+$yellow-2: #fdca40;
+$yellow-3: #fdc500;
+$ff-primary: "Lemonada", cursive;
+$ff-secondary: "Montserrat", sans-serif;
+$ff-test: "Lemonada", cursive;
 $ff-3: "Noto Sans", sans-serif;
 $ff-4: "Raleway", sans-serif;
 $ff-5: "Ubuntu", sans-serif;
 $spacing: 0.1rem;
 $transition: all 0.3s ease;
 $radius: 0.25rem;
+
+body {
+  overflow-x: hidden;
+}
