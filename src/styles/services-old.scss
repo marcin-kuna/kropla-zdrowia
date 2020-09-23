@@ -1,0 +1,78 @@
+@import "core";
+
+.services {
+  background-color: $grey-1;
+}
+
+.services-center {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.service {
+  display: grid;
+  margin-bottom: 4rem;
+}
+
+.service-info {
+  background-color: $white;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+.service-title {
+  letter-spacing: $spacing;
+  padding: 1rem 0;
+  //   margin-bottom: 1rem;
+}
+
+.service-img {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+.service-desc {
+  word-spacing: 5px;
+  //   margin-bottom: 1rem;
+}
+
+.service-link {
+  display: block;
+  padding: 1rem 0;
+  text-align: end;
+}
+
+.service:nth-of-type(even) .service-link {
+  text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+  .service {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  .service-img {
+    grid-column: 1 / span 8;
+    /* grid-column-end: 8; */
+    grid-row: 1 / 1;
+    height: 30rem;
+    border-radius: $radius;
+  }
+  .service-info {
+    z-index: 1;
+    grid-column: 5 /12;
+    grid-row: 1 / 1;
+    border-radius: $radius;
+  }
+  .service:nth-of-type(even) .service-img {
+    grid-column: 5 / -1;
+    grid-row: 1 / 1;
+  }
+  .service:nth-of-type(even) .service-info {
+    grid-column: 2 / span 7;
+    grid-row: 1 / 1;
+    text-align: left;
+  }
+}

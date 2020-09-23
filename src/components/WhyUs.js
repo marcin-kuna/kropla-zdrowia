@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import "../styles/whyus.scss"
-import { CgArrowLongRight } from "react-icons/cg"
+import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
 import Wave from "./Wave"
 
@@ -52,36 +52,41 @@ const WhyUs = () => {
                 onClick={() => setValue(index)}
                 className={`about-btn ${index === value && "active-btn"}`}
               >
-                {item.title}
+                <span className="about-btn-title">{item.title}</span>
                 <Ripple className="about-ripple" />
-                {/* <div className="dot">
-                  <div className="minidot"></div>
-                </div> */}
               </button>
             )
           })}
         </div>
         <div className="about-info">
-          <div className="image-container">
+          <div className="about-images-container">
             {informations.map((item, index) => {
               return (
-                <Image
-                  key={item.contentfulid}
-                  fluid={item.image.fluid}
-                  className={`about-image ${index === value && "active-image"}`}
-                  style={
-                    {
-                      // position: "absolute",
-                      // top: "0",
-                      // left: "0",
-                      // width: "100%",
-                    }
-                  }
-                />
+                <div
+                  className="about-img-container"
+                  data-sal="slide-up"
+                  // data-sal-delay="300"
+                  data-sal-easing="ease"
+                  data-sal-duration="1200"
+                >
+                  <Image
+                    key={item.contentfulid}
+                    fluid={item.image.fluid}
+                    className={`about-image ${
+                      index === value && "active-image"
+                    }`}
+                  />
+                </div>
               )
             })}
           </div>
-          <div className="text-container">
+          <div
+            className="text-container"
+            data-sal="fade"
+            data-sal-delay="500"
+            data-sal-easing="ease"
+            data-sal-duration="1500"
+          >
             <p className={`description description-${value}`}>{description}</p>
           </div>
         </div>
@@ -89,11 +94,19 @@ const WhyUs = () => {
           <CgArrowLongRight></CgArrowLongRight>
         </Link> */}
       </div>
+      <div
+        className="about-btn-ripple-container"
+        data-sal="zoom-in"
+        data-sal-delay="500"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <Link to="/o-nas" className="btn-round about-btn-round">
+          <BiChevronsRight className="btn-round-icon"></BiChevronsRight>
+        </Link>
+        <Ripple className="about-ripple-bg" />
+      </div>
 
-      <Ripple className="about-ripple-bg" />
-      <Link to="/o-nas" className="btn-round about-btn-round">
-        <CgArrowLongRight></CgArrowLongRight>
-      </Link>
       <Wave className="about-wave" value={d} />
     </section>
   )

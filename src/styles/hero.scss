@@ -47,53 +47,61 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 10;
   width: 100vw;
-  height: 80px;
 
-  path {
-    fill: $blue-1;
+  &-top {
+    height: 90px;
+    z-index: 5;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &-bottom {
+    height: 80px;
+    z-index: 10;
+
+    path {
+      fill: $blue-1;
+    }
   }
 }
 
-.hero-wave-under {
+.hero-ripple-container {
+  width: 160px;
+  height: 160px;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  width: 100vw;
-  height: 90px;
-
-  path {
-    fill: $white;
-  }
+  left: 15%;
+  z-index: -1;
 }
 
 .hero-ripple {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  left: 12%;
-  z-index: -1;
+  // width: 150px;
+  // height: 150px;
+  // position: absolute;
+  // left: 12%;
+  // z-index: -1;
 
   .circle {
     background-color: $blue-1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
-    &-1 {
-      // background-color: $blue-5;
-    }
-    &-2 {
-      // background-color: $blue-4;
-    }
-    &-3 {
-      // background-color: $blue-3;
-    }
-    &-4 {
-      // background-color: $blue-2;
-    }
-    &-5 {
-      // background-color: $blue-1;
-    }
+    // &-1 {
+    //   background-color: $blue-5;
+    // }
+    // &-2 {
+    //   background-color: $blue-4;
+    // }
+    // &-3 {
+    //   background-color: $blue-3;
+    // }
+    // &-4 {
+    //   background-color: $blue-2;
+    // }
+    // &-5 {
+    //   background-color: $blue-1;
+    // }
   }
 }
 
@@ -121,15 +129,16 @@
 
   .hero {
     .social-links {
+      display: none;
       position: fixed;
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+
       width: 4rem;
+      height: 11rem;
       margin: 0;
+      margin-right: 0.3rem;
       z-index: 200;
       // border: 2px solid $white;
 
@@ -150,17 +159,72 @@
     }
 
     .social-link {
+      width: 3.5rem;
+      height: 3.5rem;
+      border: none;
+      border-radius: 50%;
       padding: 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      // border: 2px solid $white;
-      // border-radius: 50%;
 
       &:hover {
         color: $white;
       }
     }
+  }
+}
+
+// TEST
+
+.waves {
+  position: relative;
+  width: 100%;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  height: 40px;
+  min-height: 40px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-ripple-container {
+    width: 175px;
+    height: 175px;
+    left: 25%;
+  }
+
+  // TEST
+  .waves {
+    height: 15vh;
+    min-height: 100px;
+    max-height: 120px;
   }
 }
 
@@ -171,9 +235,19 @@
     margin: 0 5px;
   }
 
-  .hero-ripple {
+  .hero-ripple-container {
     width: 200px;
     height: 200px;
     left: 35%;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .hero {
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
