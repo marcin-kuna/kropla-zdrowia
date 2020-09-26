@@ -6,7 +6,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

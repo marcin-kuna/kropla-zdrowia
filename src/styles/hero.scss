@@ -1,5 +1,32 @@
 @import "core";
 
+.hero-btn {
+  position: absolute;
+  bottom: 25px;
+  cursor: pointer;
+  z-index: 10;
+
+  &-drop {
+    width: 50px;
+  }
+
+  &-icon {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    color: $blue-3;
+    transition: $transition;
+  }
+}
+
+.hero-btn:hover {
+  .hero-btn-icon {
+    bottom: 12%;
+  }
+}
+
 .hero {
   margin-top: -5rem;
   padding-top: 5rem;
@@ -20,6 +47,41 @@
 .hero-image {
   object-fit: cover;
   min-height: 100vh;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(26, 106, 255, 0.5) 5%,
+    rgba(26, 106, 255, 0.45) 7%,
+    rgba(26, 106, 255, 0.4) 9%,
+    rgba(26, 106, 255, 0.35) 11%,
+    rgba(26, 106, 255, 0.3) 13%,
+    rgba(26, 106, 255, 0.25) 15%,
+    rgba(26, 106, 255, 0.2) 17%,
+    rgba(26, 106, 255, 0.15) 19%,
+    rgba(26, 106, 255, 0.13) 21%,
+    rgba(26, 106, 255, 0.11) 23%,
+    rgba(26, 106, 255, 0.09) 25%,
+    rgba(26, 106, 255, 0.07) 26%,
+    rgba(26, 106, 255, 0.06) 27%,
+    rgba(26, 106, 255, 0.05) 28%,
+    rgba(26, 106, 255, 0.04) 29%,
+    rgba(26, 106, 255, 0.03) 30%,
+    rgba(26, 106, 255, 0.02) 31%,
+    rgba(26, 106, 255, 0.01) 32%,
+    rgba(26, 106, 255, 0.005) 33%,
+    rgba(26, 106, 255, 0.002) 34%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  z-index: 0;
+  // opacity: 0.5;
 }
 
 .hero-center {
@@ -51,7 +113,7 @@
 
   &-top {
     height: 90px;
-    z-index: 5;
+    z-index: 1;
 
     path {
       fill: $white;
@@ -60,7 +122,7 @@
 
   &-bottom {
     height: 80px;
-    z-index: 10;
+    z-index: 2;
 
     path {
       fill: $blue-1;
@@ -112,6 +174,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .hero-btn-drop {
+    width: 55px;
+  }
+
   .hero-center h1 {
     letter-spacing: $spacing;
   }
@@ -175,59 +241,6 @@
   }
 }
 
-// TEST
-
-.waves {
-  position: relative;
-  width: 100%;
-  margin-bottom: -7px; /*Fix for safari gap*/
-  height: 40px;
-  min-height: 40px;
-}
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-ripple-container {
-    width: 175px;
-    height: 175px;
-    left: 25%;
-  }
-
-  // TEST
-  .waves {
-    height: 15vh;
-    min-height: 100px;
-    max-height: 120px;
-  }
-}
-
 @media screen and (min-width: 992px) {
   .dot-separator {
     font-size: 1.4rem;
@@ -250,4 +263,13 @@
       justify-content: space-between;
     }
   }
+}
+
+.section-wave {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  // z-index: 1000;
+  width: 100vw;
+  min-height: 150px;
 }

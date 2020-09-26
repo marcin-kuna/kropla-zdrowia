@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import LinkWave from "../assets/images/linkWave.png"
+
 const data = [
   {
     id: 1,
@@ -31,7 +33,10 @@ const data = [
 const tempLinks = data.map((link) => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <Link to={link.url} className="link">
+        <span className="link-text">{link.text}</span>
+        <img src={LinkWave} alt="" className="link-wave" />
+      </Link>
     </li>
   )
 })

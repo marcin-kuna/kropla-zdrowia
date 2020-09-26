@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
-import "../styles/whyus.scss"
+import "../styles/about.scss"
 import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
 import Wave from "./Wave"
@@ -41,7 +41,7 @@ const WhyUs = () => {
     "M-0.90,107.85 C192.66,43.71 312.30,148.31 503.61,95.02 L500.00,150.00 L0.00,150.00 Z"
 
   return (
-    <section className="about section">
+    <section className="about section" id="about">
       <h2 className="about-title section-title">Dlaczego My?</h2>
       <div className="about-center section-center">
         <div className="btn-container">

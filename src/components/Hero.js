@@ -9,6 +9,11 @@ import { GoPrimitiveDot } from "react-icons/go"
 import SocialLinks from "../constants/socialLinks"
 import Wave from "./Wave"
 import Ripple from "./Ripple"
+import Drop from "../assets/images/drop3.svg"
+import { HiChevronDown } from "react-icons/hi"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import SectionWaveTop from "../assets/images/wave (10).svg"
+import SectionWaveBottom from "../assets/images/wave (18).svg"
 
 const settings = {
   dots: false,
@@ -74,48 +79,31 @@ const Hero = () => {
           Przygoda
           <GoPrimitiveDot className="dot-separator"></GoPrimitiveDot>Wypoczynek
         </h3>
-      </div>
-      <Wave className="hero-wave hero-wave-top" value={d} />
-      <Wave className="hero-wave hero-wave-bottom" value={d} />
-      <SocialLinks />
-      {/* <div>
-        <svg
-          class="waves"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28"
-          preserveAspectRatio="none"
-          shape-rendering="auto"
+        <a
+          onClick={() => scrollTo("#about")}
+          className="hero-btn"
+          data-sal="slide-down"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+          data-sal-duration="1500"
         >
-          <defs>
-            <path
-              id="gentle-wave"
-              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-            />
-          </defs>
-          <g class="parallax">
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="0"
-              fill="rgba(255, 255, 255, 0.7)"
-            />
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="3"
-              fill="rgba(0, 58, 166, 1)"
-            />
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="5"
-              fill="rgba(26, 106, 255, 0.3)"
-            />
-            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#1a6aff" />
-          </g>
-        </svg>
-      </div> */}
+          <img src={Drop} className="hero-btn-drop" />
+          <HiChevronDown className="hero-btn-icon" />
+        </a>
+      </div>
+      {/* <Wave className="hero-wave hero-wave-top" value={d} />
+      <Wave className="hero-wave hero-wave-bottom" value={d} /> */}
+      <SocialLinks />
+      <img
+        src={SectionWaveTop}
+        alt=""
+        className="section-wave section-wave-top"
+      />
+      <img
+        src={SectionWaveBottom}
+        alt=""
+        className="section-wave section-wave-bottom"
+      />
     </section>
   )
 }

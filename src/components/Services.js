@@ -6,6 +6,7 @@ import "../styles/services.scss"
 import Wave from "./Wave"
 import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
+// import WaveSeparator from "../assets/images/wave-test-5.svg"
 import WaveSeparator from "../assets/images/wave-long.svg"
 
 const query = graphql`
