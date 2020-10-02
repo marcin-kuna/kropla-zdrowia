@@ -8,6 +8,7 @@ import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
 // import WaveSeparator from "../assets/images/wave-test-5.svg"
 import WaveSeparator from "../assets/images/wave-long.svg"
+import { HiChevronRight } from "react-icons/hi"
 
 const query = graphql`
   {
@@ -76,7 +77,7 @@ const Services = () => {
                   {item.description.description}
                 </p>
               </div>
-              <div
+              {/* <div
                 className="services-btn-ripple-container"
                 data-sal="zoom-in"
                 // data-sal-delay="500"
@@ -87,10 +88,31 @@ const Services = () => {
                   <BiChevronsRight className="btn-round-icon"></BiChevronsRight>
                 </Link>
                 <Ripple className="services-ripple-bg" />
-              </div>
+              </div> */}
+              <Link to="/o-nas" className="section-btn section-btn-services">
+                Pełna oferta
+                <HiChevronRight className="section-btn-icon" />
+              </Link>
             </div>
           )
         })}
+      </div>
+      <div className="section-link-test">
+        <Link to="/basen" className="section-link-test">
+          <div className="section-link-test-inner">
+            <HiChevronRight className="section-btn-icon-test" />
+          </div>
+          <svg viewBox="0 0 200 200" className="circle-test">
+            <path
+              id="curve"
+              d="M 175, 100 a75,75 0 1,1 0,-1 z"
+              fill="transparent"
+            />
+            <text width="50000">
+              <textPath xlinkHref="#curve">Pełna oferta – Basen –</textPath>
+            </text>
+          </svg>
+        </Link>
       </div>
       <Wave className="services-wave" value={d} />
     </section>

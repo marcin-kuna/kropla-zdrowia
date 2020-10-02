@@ -12,8 +12,9 @@ import Ripple from "./Ripple"
 import Drop from "../assets/images/drop3.svg"
 import { HiChevronDown } from "react-icons/hi"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import SectionWaveTop from "../assets/images/wave (10).svg"
-import SectionWaveBottom from "../assets/images/wave (18).svg"
+import HeroWaveTop from "../assets/images/wave (10).svg"
+import HeroWaveBottom from "../assets/images/wave (18).svg"
+import WaveSeparator from "../assets/images/wave-long.svg"
 
 const settings = {
   dots: false,
@@ -65,25 +66,65 @@ const Hero = () => {
         })}
       </Slider>
       <div className="hero-center">
-        <div
+        {/* <div
           className="hero-ripple-container"
           data-sal="zoom-in"
           data-sal-easing="ease"
           data-sal-duration="1500"
         >
           <Ripple className="hero-ripple" />
+        </div> */}
+        <div className="hero-text">
+          <h1
+            className="hero-text-heading"
+            data-sal="fade"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            data-sal-duration="1500"
+          >
+            Obozy i
+          </h1>
+          <h1
+            className="hero-text-heading"
+            data-sal="fade"
+            data-sal-delay="600"
+            data-sal-easing="ease"
+            data-sal-duration="1500"
+          >
+            Zajęcia sportowe
+          </h1>
+          <img
+            src={WaveSeparator}
+            alt=""
+            className="wave-separator"
+            data-sal="zoom-in"
+            data-sal-delay="900"
+            data-sal-easing="ease"
+            data-sal-duration="1500"
+          />
+          <p
+            className="hero-text-para"
+            data-sal="fade"
+            data-sal-delay="900"
+            data-sal-easing="ease"
+            data-sal-duration="1500"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            delectus nihil eius possimus quod architecto porro cumque assumenda
+            soluta culpa.
+          </p>
         </div>
-        <h1>Kropla Zdrowia</h1>
+        {/* <h1>Kropla Zdrowia</h1>
         <h3>
           Sport<GoPrimitiveDot className="dot-separator"></GoPrimitiveDot>
           Przygoda
           <GoPrimitiveDot className="dot-separator"></GoPrimitiveDot>Wypoczynek
-        </h3>
+        </h3> */}
         <a
           onClick={() => scrollTo("#about")}
           className="hero-btn"
           data-sal="slide-down"
-          data-sal-delay="300"
+          // data-sal-delay="900"
           data-sal-easing="ease"
           data-sal-duration="1500"
         >
@@ -94,16 +135,8 @@ const Hero = () => {
       {/* <Wave className="hero-wave hero-wave-top" value={d} />
       <Wave className="hero-wave hero-wave-bottom" value={d} /> */}
       <SocialLinks />
-      <img
-        src={SectionWaveTop}
-        alt=""
-        className="section-wave section-wave-top"
-      />
-      <img
-        src={SectionWaveBottom}
-        alt=""
-        className="section-wave section-wave-bottom"
-      />
+      <img src={HeroWaveTop} alt="" className="hero-wave" />
+      <img src={HeroWaveBottom} alt="" className="hero-wave" />
     </section>
   )
 }

@@ -19,8 +19,6 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: $spacing;
-  // text-transform: uppercase;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
@@ -247,5 +245,37 @@ a {
     height: 100%;
     opacity: 0.2;
     z-index: 1;
+  }
+}
+
+// NOWY BTN SZEROKI
+
+.section-btn {
+  display: block;
+  width: 160px;
+  height: 45px;
+  border-radius: $radius;
+  color: $blue-4;
+  background-color: $yellow-4;
+  font-family: $ff-secondary;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+
+  &-icon {
+    font-size: 1.6rem;
+    transition: $transition;
+    position: relative;
+    left: 0;
+  }
+
+  &:hover {
+    .section-btn-icon {
+      left: 5px;
+    }
   }
 }

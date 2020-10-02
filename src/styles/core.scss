@@ -7,6 +7,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Baloo+Tammudu+2:wght@400;500;600;700;800&family=Bangers&family=Kalam:wght@300;400;700&family=Luckiest+Guy&display=swap");
+
+@font-face {
+  font-family: "luckiest_guy";
+  src: url("../assets/fonts/LuckiestGuy-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 // font-family: 'Noto Sans', sans-serif;
 // font-family: 'Poppins', sans-serif;
@@ -24,6 +32,11 @@
 // font-family: 'Lemonada', cursive;
 // font-family: 'Palanquin', sans-serif; // quotes
 // font-family: 'Catamaran', sans-serif; //quotes
+// font-family: 'Amatic SC', cursive;
+// font-family: 'Baloo Tammudu 2', cursive;
+// font-family: 'Bangers', cursive;
+// font-family: 'Kalam', cursive;
+// font-family: 'Luckiest Guy', cursive;
 
 // 1A6AFF, 004EDF, 003AA6, 00266C, 001233, 00102D, 000D26, 000B20
 
@@ -43,16 +56,17 @@ $yellow-1: #ffd500;
 $yellow-2: #fdca40;
 $yellow-3: #fdc500;
 $yellow-4: #ffb400;
-$ff-primary: "Lemonada", cursive;
+$ff-primary: "luckiest_guy";
+// $ff-primary: "Lemonada", cursive;
 $ff-secondary: "Poppins", sans-serif;
-$ff-test: "Catamaran", sans-serif;
+$ff-test: "luckiest_guy";
 $ff-3: "Noto Sans", sans-serif;
 $ff-4: "Raleway", sans-serif;
 $ff-5: "Poppins", sans-serif;
 $ff-quotes: "Catamaran", sans-serif;
 $spacing: 0.1rem;
 $transition: all 0.3s ease;
-$radius: 0.25rem;
+$radius: 20px;
 
 body {
   overflow-x: hidden;

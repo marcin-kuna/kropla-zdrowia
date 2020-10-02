@@ -19,7 +19,9 @@
   // );
 
   &-title {
-    color: $blue-5;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
 
@@ -71,10 +73,17 @@
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
   height: 19rem;
+
+  .wave-separator {
+    width: 6rem;
+    margin: 0.3rem 0;
+  }
 }
 
 .service-title {
   white-space: nowrap;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .service-description {
@@ -210,11 +219,6 @@
   }
 }
 
-.wave-separator {
-  width: 6rem;
-  margin: 0.3rem 0;
-}
-
 @media screen and (min-width: 768px) {
   .service-info {
     height: 25rem;
@@ -337,13 +341,15 @@
     top: -100px;
   }
 
-  .service-title {
-    font-size: 1.7rem;
+  .service-info {
+    .wave-separator {
+      width: 8rem;
+      margin: 0.5rem 0;
+    }
   }
 
-  .wave-separator {
-    width: 8rem;
-    margin: 0.5rem 0;
+  .service-title {
+    font-size: 1.7rem;
   }
 
   .service-description {
@@ -360,5 +366,95 @@
   .service-info {
     width: 30vw;
     height: 30vw;
+  }
+}
+
+.section-btn-services {
+  position: absolute;
+  bottom: 60px;
+  left: 300px;
+}
+
+.circle-test {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  // border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // bottom: 300px;
+  // left: 200px;
+
+  text {
+    fill: $yellow-4;
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.section-link-test {
+  position: relative;
+  // border: 2px solid red;
+  left: 200px;
+  bottom: 200px;
+
+  &-inner {
+    width: 75px;
+    height: 75px;
+    background-color: $yellow-4;
+    border-radius: 50%;
+    position: absolute;
+    top: 22px;
+    left: 61px;
+    transform: translateX(-50%);
+  }
+}
+
+.section-btn-icon-test {
+  font-size: 50px;
+  color: $blue-4;
+  position: absolute;
+  top: 14px;
+  left: 51%;
+  transform: translateX(-50%);
+  // z-index: 1000;
+}
+
+.circle-test:hover {
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

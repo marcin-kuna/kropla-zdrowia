@@ -34,7 +34,7 @@ const tempLinks = data.map((link) => {
   return (
     <li key={link.id}>
       <Link to={link.url} className="link">
-        <span className="link-text">{link.text}</span>
+        <span>{link.text}</span>
         <img src={LinkWave} alt="" className="link-wave" />
       </Link>
     </li>

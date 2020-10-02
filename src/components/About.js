@@ -6,6 +6,8 @@ import "../styles/about.scss"
 import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
 import Wave from "./Wave"
+import { HiChevronRight } from "react-icons/hi"
+import AboutWave from "../assets/images/wave (17).svg"
 
 const query = graphql`
   {
@@ -53,7 +55,10 @@ const WhyUs = () => {
                 className={`about-btn ${index === value && "active-btn"}`}
               >
                 <span className="about-btn-title">{item.title}</span>
-                <Ripple className="about-ripple" />
+                <div className="about-btn-radio">
+                  <div className="about-btn-radio-dot"></div>
+                </div>
+                {/* <Ripple className="about-ripple" /> */}
               </button>
             )
           })}
@@ -94,7 +99,7 @@ const WhyUs = () => {
           <CgArrowLongRight></CgArrowLongRight>
         </Link> */}
       </div>
-      <div
+      {/* <div
         className="about-btn-ripple-container"
         data-sal="zoom-in"
         data-sal-delay="500"
@@ -105,9 +110,13 @@ const WhyUs = () => {
           <BiChevronsRight className="btn-round-icon"></BiChevronsRight>
         </Link>
         <Ripple className="about-ripple-bg" />
-      </div>
-
-      <Wave className="about-wave" value={d} />
+      </div> */}
+      <Link to="/o-nas" className="section-btn section-btn-about">
+        Więcej o nas
+        <HiChevronRight className="section-btn-icon" />
+      </Link>
+      {/* <Wave className="about-wave" value={d} /> */}
+      <img src={AboutWave} alt="" className="about-wave" />
     </section>
   )
 }
