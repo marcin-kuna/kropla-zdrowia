@@ -1,6 +1,6 @@
 @import "core";
 
-.navbar {
+.nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -9,38 +9,41 @@
   display: flex;
   align-items: center;
   z-index: 100;
-}
 
-.nav-center {
-  width: 90vw;
-  margin: 0 auto;
-}
+  &-center {
+    width: 90vw;
+    margin: 0 auto;
+  }
 
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.navbar-logo {
-  height: 50px;
-}
+  &-logo {
+    height: 50px;
+  }
 
-.toggle-btn {
-  font-size: 2.8rem;
-  background: transparent;
-  border-color: transparent;
-  color: $white;
-  cursor: pointer;
-  transition: $transition;
-  outline: none;
+  &-toggle-btn {
+    font-size: 2.8rem;
+    background: transparent;
+    border-color: transparent;
+    color: $white;
+    cursor: pointer;
+    transition: $transition;
+    outline: none;
 
-  &:hover {
-    color: $blue-1;
+    &:hover {
+      color: $yellow-4;
+    }
+  }
+
+  &-links {
+    display: none;
   }
 }
 
-.nav-links,
 .link-wave {
   display: none;
 }
@@ -52,10 +55,11 @@
     align-items: center;
   }
 
-  .toggle-btn {
+  .nav-toggle-btn {
     display: none;
   }
 
+  // Structure in Constants/links
   .nav-links {
     display: flex;
     justify-content: flex-end;
@@ -68,49 +72,50 @@
         margin-right: 0;
       }
 
-      &:nth-child(1),
-      &:nth-child(2) {
-        .link-wave {
-          left: -0.2rem;
-        }
-      }
+      .link {
+        text-transform: capitalize;
+        color: $white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 0.15rem;
+        transition: $transition;
+        padding: 0.4rem 0;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        margin-top: 10px; // overflow effect correction
 
-      &:nth-child(4) {
-        .link-wave {
-          left: -0.1rem;
+        &-wave {
+          width: 100px;
+          display: block;
+          opacity: 0;
+          transition: $transition;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        &:hover {
+          color: $blue-1;
+
+          .link-wave {
+            opacity: 1;
+          }
         }
       }
     }
-  }
 
-  .link {
-    text-transform: capitalize;
-    color: $white;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.15rem;
-    transition: $transition;
-    padding: 0.4rem 0;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    margin-top: 10px; // overflow effect correction
-
-    &-wave {
-      width: 100px;
-      display: block;
-      opacity: 0;
-      transition: $transition;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
-    &:hover {
-      color: $blue-1;
-
+    // 'Centering' waves
+    &:nth-child(1),
+    &:nth-child(2) {
       .link-wave {
-        opacity: 1;
+        left: -0.2rem;
+      }
+    }
+
+    &:nth-child(4) {
+      .link-wave {
+        left: -0.1rem;
       }
     }
   }
@@ -123,9 +128,5 @@
 
   .nav-links li {
     margin-right: 2rem;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 }

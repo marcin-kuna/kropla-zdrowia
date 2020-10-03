@@ -6,11 +6,15 @@ import "../styles/navbar.scss"
 
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <nav className="navbar">
+    <nav className="nav">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="Logo Kropli Zdrowia" className="navbar-logo" />
-          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+          <img src={logo} alt="Logo Kropli Zdrowia" className="nav-logo" />
+          <button
+            type="button"
+            className="nav-toggle-btn"
+            onClick={toggleSidebar}
+          >
             <CgMenuRightAlt></CgMenuRightAlt>
           </button>
         </div>

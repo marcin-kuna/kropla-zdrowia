@@ -14,75 +14,80 @@
   align-items: center;
   transition: $transition;
   transform: translateX(-100%);
+
+  &-links li a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue-4;
+    letter-spacing: $spacing;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+
+    &:hover {
+      color: $yellow-4;
+    }
+  }
+
+  &-close-btn {
+    position: absolute;
+    right: 2.5%;
+    top: 1.5%;
+    font-size: 2.8rem;
+    background: transparent;
+    border-color: transparent;
+    color: $blue-4;
+    cursor: pointer;
+    outline: none;
+    transition: $transition;
+
+    &:hover {
+      color: $yellow-4;
+    }
+  }
+
+  &-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    z-index: -1;
+
+    path {
+      fill: $blue-1;
+    }
+  }
 }
 
 .show-sidebar {
   transform: translateX(0);
 }
 
-.sidebar-links li a {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  color: $blue-4;
-  letter-spacing: $spacing;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: $radius;
-  // padding: 0 2rem;
-  font-weight: bold;
-
-  &:hover {
-    // background-color: $blue-1;
-    color: $white;
-  }
-}
-
 .social-links.sidebar-icons {
-  width: 9rem;
+  width: 10rem;
   justify-content: space-between;
-  margin-top: 1rem;
 
   li a {
+    font-size: 2.2rem;
     color: $blue-4;
     transition: $transition;
 
     &:hover {
-      color: $white;
+      color: $yellow-4;
     }
-  }
-}
-
-.close-btn {
-  position: absolute;
-  // right: 4.75%;
-  // top: 2.75%;
-  right: 2.5%;
-  top: 1.5%;
-  font-size: 2.8rem;
-  background: transparent;
-  border-color: transparent;
-  color: $blue-4;
-  cursor: pointer;
-  outline: none;
-}
-
-.sidebar-wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 110vh;
-  z-index: -1;
-
-  path {
-    fill: $blue-1;
   }
 }
 
 @media screen and (min-width: 992px) {
   .sidebar {
     transform: translateX(-100%);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 768px) {
+  .sidebar-links li a {
+    margin-bottom: 0;
   }
 }
