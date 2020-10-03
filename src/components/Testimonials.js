@@ -3,7 +3,9 @@ import "../styles/testimonials.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import Wave from "./Wave"
-import Ripple from "./Ripple"
+// import Ripple from "./Ripple"
+import Drop from "../assets/images/drop3.svg"
+import TestimonialsWave from "../assets/images/wave (11).svg"
 
 const query = graphql`
   {
@@ -43,7 +45,8 @@ const Testimonials = () => {
                 key={item.contentfulid}
               >
                 <p className="testimonial-text">{item.testimonial}</p>
-                <Ripple className="testimonial-ripple" />
+                {/* <Ripple className="testimonial-ripple" /> */}
+                <img src={Drop} className="testimonials-drop" />
                 <h4 className="testimonial-name">{item.name}</h4>
               </div>
             )
@@ -52,9 +55,15 @@ const Testimonials = () => {
         <div className="testimonial-btns">
           {testimonials.map((item, index) => {
             return (
-              <div className="testimonial-btn-container">
+              <div
+                className="testimonial-btn-container"
+                key={item.contentfulid}
+                data-sal="slide-down"
+                // data-sal-delay="300"
+                data-sal-easing="ease"
+                data-sal-duration="1200"
+              >
                 <button
-                  key={item.contentfulid}
                   onClick={() => {
                     setValue(index)
                   }}
@@ -70,12 +79,12 @@ const Testimonials = () => {
                     <div className="testimonial-img-bg"></div>
                   </div>
                 </button>
-                {/* <h4 className="testimonial-name">{item.name}</h4> */}
               </div>
             )
           })}
         </div>
       </div>
+      <img src={TestimonialsWave} alt="" className="testimonials-wave" />
     </section>
   )
 }

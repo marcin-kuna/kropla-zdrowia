@@ -3,11 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import "../styles/about.scss"
-import { BiChevronsRight } from "react-icons/bi"
-import Ripple from "../components/Ripple"
-import Wave from "./Wave"
 import { HiChevronRight } from "react-icons/hi"
-import AboutWave from "../assets/images/wave (17).svg"
+import AboutWave from "../assets/images/aboutWave.svg"
 
 const query = graphql`
   {
@@ -15,7 +12,7 @@ const query = graphql`
       nodes {
         title
         image {
-          fluid {
+          fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyContentfulFluid
           }
         }
@@ -58,7 +55,6 @@ const WhyUs = () => {
                 <div className="about-btn-radio">
                   <div className="about-btn-radio-dot"></div>
                 </div>
-                {/* <Ripple className="about-ripple" /> */}
               </button>
             )
           })}
@@ -69,7 +65,7 @@ const WhyUs = () => {
               return (
                 <div
                   className="about-img-container"
-                  data-sal="slide-up"
+                  data-sal="slide-down"
                   // data-sal-delay="300"
                   data-sal-easing="ease"
                   data-sal-duration="1200"
@@ -87,7 +83,7 @@ const WhyUs = () => {
           </div>
           <div
             className="text-container"
-            data-sal="fade"
+            data-sal="zoom-in"
             data-sal-delay="500"
             data-sal-easing="ease"
             data-sal-duration="1500"
@@ -95,27 +91,18 @@ const WhyUs = () => {
             <p className={`description description-${value}`}>{description}</p>
           </div>
         </div>
-        {/* <Link to="/o-nas" className="btn-round">
-          <CgArrowLongRight></CgArrowLongRight>
-        </Link> */}
       </div>
-      {/* <div
-        className="about-btn-ripple-container"
+      <Link
+        to="/o-nas"
+        className="section-btn section-btn-about"
         data-sal="zoom-in"
-        data-sal-delay="500"
+        data-sal-delay="700"
         data-sal-easing="ease"
         data-sal-duration="1500"
       >
-        <Link to="/o-nas" className="btn-round about-btn-round">
-          <BiChevronsRight className="btn-round-icon"></BiChevronsRight>
-        </Link>
-        <Ripple className="about-ripple-bg" />
-      </div> */}
-      <Link to="/o-nas" className="section-btn section-btn-about">
         Więcej o nas
         <HiChevronRight className="section-btn-icon" />
       </Link>
-      {/* <Wave className="about-wave" value={d} /> */}
       <img src={AboutWave} alt="" className="about-wave" />
     </section>
   )

@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import "../styles/services.scss"
-import Wave from "./Wave"
 import { BiChevronsRight } from "react-icons/bi"
 import Ripple from "../components/Ripple"
 // import WaveSeparator from "../assets/images/wave-test-5.svg"
 import WaveSeparator from "../assets/images/wave-long.svg"
 import { HiChevronRight } from "react-icons/hi"
+import ServicesWave from "../assets/images/servicesWave.svg"
 
 const query = graphql`
   {
@@ -43,12 +43,6 @@ const Services = () => {
       <div className="services-center section-center">
         <div className="title-container">
           <h2 className="services-title section-title">Nasza oferta</h2>
-          {/* <img src={WaveSeparator} alt="" className="wave-separator" /> */}
-          {/* <div className="title-line"></div>
-          <div className="title-text">
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing</span>
-            <span>Dolor sit amet</span>
-          </div> */}
         </div>
         {services.map((item) => {
           return (
@@ -72,49 +66,39 @@ const Services = () => {
               >
                 <h3 className="service-title">{item.title}</h3>
                 <img src={WaveSeparator} alt="" className="wave-separator" />
-                {/* <div className="separator"></div> */}
                 <p className="service-description">
                   {item.description.description}
                 </p>
-              </div>
-              {/* <div
-                className="services-btn-ripple-container"
-                data-sal="zoom-in"
-                // data-sal-delay="500"
-                data-sal-easing="ease"
-                data-sal-duration="1500"
-              >
-                <Link to={item.link} className="btn-round services-btn-round">
-                  <BiChevronsRight className="btn-round-icon"></BiChevronsRight>
+                <Link
+                  to={item.link}
+                  className="section-link-test"
+                  data-sal="zoom-in"
+                  data-sal-delay="1500"
+                  data-sal-easing="ease"
+                  data-sal-duration="1500"
+                >
+                  <div className="section-link-test-inner">
+                    <HiChevronRight className="section-btn-icon-test" />
+                  </div>
+                  <svg viewBox="0 0 200 200" className="circle-test">
+                    <path
+                      id="curve"
+                      d="M 175, 100 a75,75 0 1,1 0,-1 z"
+                      fill="transparent"
+                    />
+                    <text>
+                      <textPath xlinkHref="#curve">
+                        {`Pełna oferta – ${item.link} –`}
+                      </textPath>
+                    </text>
+                  </svg>
                 </Link>
-                <Ripple className="services-ripple-bg" />
-              </div> */}
-              <Link to="/o-nas" className="section-btn section-btn-services">
-                Pełna oferta
-                <HiChevronRight className="section-btn-icon" />
-              </Link>
+              </div>
             </div>
           )
         })}
       </div>
-      <div className="section-link-test">
-        <Link to="/basen" className="section-link-test">
-          <div className="section-link-test-inner">
-            <HiChevronRight className="section-btn-icon-test" />
-          </div>
-          <svg viewBox="0 0 200 200" className="circle-test">
-            <path
-              id="curve"
-              d="M 175, 100 a75,75 0 1,1 0,-1 z"
-              fill="transparent"
-            />
-            <text width="50000">
-              <textPath xlinkHref="#curve">Pełna oferta – Basen –</textPath>
-            </text>
-          </svg>
-        </Link>
-      </div>
-      <Wave className="services-wave" value={d} />
+      <img src={ServicesWave} alt="" className="services-wave" />
     </section>
   )
 }

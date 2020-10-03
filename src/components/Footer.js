@@ -1,17 +1,30 @@
 import React from "react"
 import SocialLinks from "../constants/socialLinks"
 import "../styles/footer.scss"
+import Logo from "../assets/images/logo-footer.svg"
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div>
+      <div className="footer-center section-center">
+        <img src={Logo} alt="" className="footer-logo" />
+        <div className="footer-info">
+          <p>Kropla Zdrowia</p>
+          <p>ul. Focha 13/21</p>
+          <p>26-600 Radom</p>
+        </div>
+        <div className="footer-info">
+          <p>(+48) 603 952 902</p>
+          <p>NIP: 796-226-16-70</p>
+          <p>REGON: 672877464</p>
+          <p>Nr Konta: 84 2490 0005 0000 4600 6531 1730</p>
+        </div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
-        <h4>
-          copyright&copy;{new Date().getFullYear()}
-          <span>Kropla Zdrowia</span> Wszelkie prawa zastrzeżone
-        </h4>
       </div>
+      <h4>
+        copyright&copy;{new Date().getFullYear()}
+        <span>Kropla Zdrowia</span> – Wszelkie prawa zastrzeżone
+      </h4>
     </footer>
   )
 }

@@ -1,30 +1,93 @@
 @import "core";
 
 .footer {
-  height: 9rem;
+  // height: 9rem;
   text-align: center;
+  // place-items: center;
+  background-color: $blue-5;
+  // margin-top: -50px;
+  // border: 2px solid red;
+}
+
+.footer-center {
   display: grid;
   place-items: center;
-  font-family: $ff-primary;
-  // background-color: $blue-4;
-  background: url("../assets/images/sand.png");
-  background-color: #f2f254;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  // column-gap: 20px;
+  // border: 2px solid red;
+  // margin-top: -50px;
+  position: relative;
 }
+
+.footer-info {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
 .footer h4 {
-  margin-top: 0.5rem;
-  color: white;
+  // margin-top: 0.5rem;
+  margin: 0;
+  padding: 2rem 0;
+  color: $white;
   font-weight: normal;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  // font-family: $ff-secondary;
+  opacity: 0.8;
 }
 .footer h4 span {
-  color: #2caeba;
+  color: $blue-1;
 }
-.footer-links {
-  margin: 0 auto 1rem auto;
+.social-links.footer-links {
+  width: auto;
+  opacity: 0.6;
 }
 .footer .social-link {
   color: white;
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
 }
 .footer .social-link:hover {
-  color: #2caeba;
+  color: $blue-1;
+}
+
+.footer-logo {
+  width: 150px;
+  // margin: -100px 0;
+  // border: 2px solid palegoldenrod;
+  // position: absolute;
+  // left: 0;
+  // bottom: 0;
+  // width: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-center {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .footer .social-link {
+    // margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer-info {
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .footer-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .social-links.footer-links {
+    display: none;
+  }
 }

@@ -18,8 +18,9 @@
 }
 
 .hero-image {
-  object-fit: cover;
   min-height: 100vh;
+  // object-fit: cover;
+  // object-position: center;
 }
 
 .hero::after {
@@ -125,66 +126,12 @@
   }
 }
 
-// .hero-wave {               // 1st version
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100vw;
-
-//   &-top {
-//     height: 90px;
-//     z-index: 1;
-
-//     path {
-//       fill: $white;
-//     }
-//   }
-
-//   &-bottom {
-//     height: 80px;
-//     z-index: 2;
-
-//     path {
-//       fill: $blue-1;
-//     }
-//   }
-// }
-
 .hero-ripple-container {
   width: 160px;
   height: 160px;
   position: absolute;
   left: 15%;
   z-index: -1;
-}
-
-.hero-ripple {
-  // width: 150px;
-  // height: 150px;
-  // position: absolute;
-  // left: 12%;
-  // z-index: -1;
-
-  .circle {
-    background-color: $blue-1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    // &-1 {
-    //   background-color: $blue-5;
-    // }
-    // &-2 {
-    //   background-color: $blue-4;
-    // }
-    // &-3 {
-    //   background-color: $blue-3;
-    // }
-    // &-4 {
-    //   background-color: $blue-2;
-    // }
-    // &-5 {
-    //   background-color: $blue-1;
-    // }
-  }
 }
 
 .dot-separator {

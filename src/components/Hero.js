@@ -12,8 +12,8 @@ import Ripple from "./Ripple"
 import Drop from "../assets/images/drop3.svg"
 import { HiChevronDown } from "react-icons/hi"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import HeroWaveTop from "../assets/images/wave (10).svg"
-import HeroWaveBottom from "../assets/images/wave (18).svg"
+import HeroWaveTop from "../assets/images/heroWaveTop.svg"
+import HeroWaveBottom from "../assets/images/heroWaveBottom.svg"
 import WaveSeparator from "../assets/images/wave-long.svg"
 
 const settings = {
@@ -34,7 +34,7 @@ const query = graphql`
     ) {
       nodes {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
           id
@@ -61,6 +61,7 @@ const Hero = () => {
               fluid={item.childImageSharp.fluid}
               className="hero-image"
               key={item.childImageSharp.id}
+              alt=""
             />
           )
         })}
