@@ -99,11 +99,21 @@
 
   &-wave {
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
     left: 0;
     z-index: 1;
     width: 100vw;
     min-height: 150px;
+
+    &-top {
+      bottom: -29px;
+    }
+  }
+}
+
+@media screen and (min-width: 412px) {
+  &-wave {
+    bottom: -20px;
 
     &-top {
       bottom: -24px;
@@ -202,5 +212,11 @@
       flex-direction: column;
       justify-content: space-between;
     }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 768px) {
+  .hero {
+    height: 140vh;
   }
 }
