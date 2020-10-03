@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: $ff-primary;
   background: $blue-1;
@@ -14,6 +19,7 @@ body {
   font-size: 0.875rem;
   margin-top: 5rem;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1,
