@@ -67,14 +67,6 @@ const Hero = () => {
         })}
       </Slider>
       <div className="hero-center">
-        {/* <div
-          className="hero-ripple-container"
-          data-sal="zoom-in"
-          data-sal-easing="ease"
-          data-sal-duration="1500"
-        >
-          <Ripple className="hero-ripple" />
-        </div> */}
         <div className="hero-text">
           <h1
             className="hero-text-heading"
