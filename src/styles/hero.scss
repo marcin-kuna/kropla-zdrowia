@@ -218,5 +218,9 @@
 @media screen and (orientation: landscape) and (max-device-width: 768px) {
   .hero {
     height: 140vh;
+
+    &-image {
+      min-height: 140vh;
+    }
   }
 }
