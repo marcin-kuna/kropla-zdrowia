@@ -3,12 +3,6 @@
 .about {
   background-color: $blue-1;
   padding: 2rem;
-
-  &-title {
-    color: $white;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
 }
 
 .about-info {
@@ -67,7 +61,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-left: 20px; // 'correction' for jc: center
   height: 60px;
   // border: 2px solid yellow;
@@ -79,7 +73,7 @@
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
   transition: $transition;
   cursor: pointer;
   // padding: 0.5rem 0;
@@ -151,11 +145,16 @@
 
 @media screen and (min-width: 576px) {
   .about-btn {
+    margin: 0 0.5rem;
     font-size: 1.3rem;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .btn-container {
+    margin-bottom: 2rem;
+  }
+
   .about-btn {
     margin: 0 1rem;
     font-size: 1.5rem;

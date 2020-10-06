@@ -35,8 +35,6 @@ const Services = () => {
     allContentfulServices: { nodes: services },
   } = useStaticQuery(query)
   const { title, description, image, link } = services
-  const d =
-    "M-2.03,75.29 C185.89,203.57 193.79,-59.90 500.22,114.76 L500.00,150.00 L0.00,150.00 Z"
 
   return (
     <section className="services section">
