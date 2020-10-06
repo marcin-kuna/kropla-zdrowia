@@ -36,8 +36,6 @@ const WhyUs = () => {
     description: { description },
     image,
   } = informations[value]
-  const d =
-    "M-0.90,107.85 C192.66,43.71 312.30,148.31 503.61,95.02 L500.00,150.00 L0.00,150.00 Z"
 
   return (
     <section className="about section" id="about">
@@ -95,8 +93,8 @@ const WhyUs = () => {
       <Link
         to="/o-nas"
         className="section-btn section-btn-about"
-        data-sal="zoom-in"
-        data-sal-delay="700"
+        data-sal="fade"
+        data-sal-delay="500"
         data-sal-easing="ease"
         data-sal-duration="1500"
       >

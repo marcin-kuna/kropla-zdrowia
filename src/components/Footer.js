@@ -1,7 +1,7 @@
 import React from "react"
 import SocialLinks from "../constants/socialLinks"
 import "../styles/footer.scss"
-import Logo from "../assets/images/logo-footer.svg"
+import Logo from "../assets/images/logoWhite.svg"
 
 const Footer = () => {
   return (
