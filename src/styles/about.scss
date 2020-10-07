@@ -100,7 +100,7 @@
 .about-btn-radio {
   width: 26px;
   height: 26px;
-  border: 0.1rem solid rgba(0, 38, 108, 0.5);
+  // border: 0.1rem solid rgba(0, 38, 108, 0.5);
   border-radius: 50%;
   background-color: $white;
   display: flex;
@@ -112,7 +112,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(0, 38, 108, 0.5);
+    background-color: rgba(0, 38, 108, 0.3);
   }
 }
 
@@ -127,7 +127,7 @@
 
   .about-btn-radio {
     background-color: $yellow-4;
-    border: 0.1rem solid rgba(0, 38, 108, 1);
+    // border: 0.1rem solid rgba(0, 38, 108, 1);
 
     &-dot {
       background-color: rgba(0, 38, 108, 1);

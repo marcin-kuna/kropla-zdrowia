@@ -92,6 +92,28 @@ const WhyUs = () => {
       </div>
       <Link
         to="/o-nas"
+        className="spinning-btn"
+        data-sal="zoom-in"
+        data-sal-delay="1500"
+        data-sal-easing="ease"
+        data-sal-duration="1500"
+      >
+        <div className="spinning-btn-inner">
+          <HiChevronRight className="spinning-btn-icon" />
+        </div>
+        <svg viewBox="0 0 200 200" className="spinning-btn-svg">
+          <path
+            id="curve"
+            d="M 175, 100 a75,75 0 1,1 0,-1 z"
+            fill="transparent"
+          />
+          <text>
+            <textPath xlinkHref="#curve">Więcej o nas Więcej o nas </textPath>
+          </text>
+        </svg>
+      </Link>
+      {/* <Link
+        to="/o-nas"
         className="section-btn section-btn-about"
         data-sal="fade"
         data-sal-delay="500"
@@ -100,7 +122,7 @@ const WhyUs = () => {
       >
         Więcej o nas
         <HiChevronRight className="section-btn-icon" />
-      </Link>
+      </Link> */}
       <img src={AboutWave} alt="" className="about-wave" />
     </section>
   )
