@@ -36,18 +36,19 @@ const WhyUs = () => {
     description: { description },
     image,
   } = informations[value]
+  console.log(informations)
 
   return (
     <section className="about section" id="about">
       <h2 className="about-title section-title">Dlaczego My?</h2>
       <div className="about-center section-center">
-        <div className="btn-container">
+        <div className="about-btn-container">
           {informations.map((item, index) => {
             return (
               <button
                 key={item.contentfulid}
                 onClick={() => setValue(index)}
-                className={`about-btn ${index === value && "active-btn"}`}
+                className={`about-btn ${index === value && "about-btn-active"}`}
               >
                 <span className="about-btn-title">{item.title}</span>
                 <div className="about-btn-radio">
@@ -58,21 +59,20 @@ const WhyUs = () => {
           })}
         </div>
         <div className="about-info">
-          <div className="about-images-container">
+          <div className="about-info-images">
             {informations.map((item, index) => {
               return (
                 <div
-                  className="about-img-container"
+                  key={item.contentfulid}
+                  className="about-image-container"
                   data-sal="slide-down"
-                  // data-sal-delay="300"
                   data-sal-easing="ease"
                   data-sal-duration="1200"
                 >
                   <Image
-                    key={item.contentfulid}
                     fluid={item.image.fluid}
                     className={`about-image ${
-                      index === value && "active-image"
+                      index === value && "about-image-active"
                     }`}
                   />
                 </div>
@@ -80,21 +80,23 @@ const WhyUs = () => {
             })}
           </div>
           <div
-            className="text-container"
+            className="about-description-container"
             data-sal="zoom-in"
             data-sal-delay="500"
             data-sal-easing="ease"
             data-sal-duration="1500"
           >
-            <p className={`description description-${value}`}>{description}</p>
+            <p className={`about-description about-description-${value}`}>
+              {description}
+            </p>
           </div>
         </div>
       </div>
       <Link
         to="/o-nas"
-        className="spinning-btn"
+        className="spinning-btn about-spinning-btn"
         data-sal="zoom-in"
-        data-sal-delay="1500"
+        data-sal-delay="600"
         data-sal-easing="ease"
         data-sal-duration="1500"
       >
@@ -112,17 +114,6 @@ const WhyUs = () => {
           </text>
         </svg>
       </Link>
-      {/* <Link
-        to="/o-nas"
-        className="section-btn section-btn-about"
-        data-sal="fade"
-        data-sal-delay="500"
-        data-sal-easing="ease"
-        data-sal-duration="1500"
-      >
-        Więcej o nas
-        <HiChevronRight className="section-btn-icon" />
-      </Link> */}
       <img src={AboutWave} alt="" className="about-wave" />
     </section>
   )

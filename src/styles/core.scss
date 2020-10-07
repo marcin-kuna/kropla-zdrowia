@@ -67,3 +67,12 @@ $ff-quotes: "Catamaran", sans-serif;
 $spacing: 0.1rem;
 $transition: all 0.3s ease;
 $radius: 20px;
+@mixin image-gradient {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 206, 255, 0) 50%, #00caff 100%);
+}
