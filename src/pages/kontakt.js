@@ -5,7 +5,7 @@ import SubpageLayout from "../components/SubpageLayout"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "obozy.jpg" }) {
+    file(relativePath: { eq: "contact2.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           ...GatsbyImageSharpFluid
@@ -15,7 +15,7 @@ const query = graphql`
   }
 `
 
-const Obozy = () => {
+const Kontakt = () => {
   const {
     file: {
       childImageSharp: { fluid },
@@ -24,7 +24,7 @@ const Obozy = () => {
 
   return (
     <Layout>
-      <SubpageLayout image={fluid} heading="Oferta – Obozy">
+      <SubpageLayout image={fluid} heading="Skontaktuj się!">
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit
           consectetur dolore ducimus repellendus, nam nihil nulla reprehenderit
@@ -45,4 +45,4 @@ const Obozy = () => {
   )
 }
 
-export default Obozy
+export default Kontakt

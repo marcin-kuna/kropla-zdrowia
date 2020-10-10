@@ -7,6 +7,13 @@
     text-align: left;
     margin-bottom: 5rem;
   }
+
+  &-wave {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100vw;
+  }
 }
 
 .service {
@@ -172,11 +179,4 @@
     width: 33vw;
     height: 33vw;
   }
-}
-
-.services-wave {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100vw;
 }

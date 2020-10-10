@@ -2,10 +2,8 @@ import React from "react"
 import "../styles/testimonials.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import Wave from "./Wave"
-// import Ripple from "./Ripple"
 import Drop from "../assets/images/drop3.svg"
-import TestimonialsWave from "../assets/images/wave (11).svg"
+import TestimonialsWave from "../assets/images/testimonialsWave.svg"
 
 const query = graphql`
   {
@@ -35,7 +33,13 @@ const Testimonials = () => {
     <section className="testimonials section">
       <h2 className="section-title testimonials-title">Opinie o nas</h2>
       <div className="testimonials-center section-center">
-        <div className="testimonial-container">
+        <div
+          className="testimonial-container"
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+          data-sal-duration="1200"
+        >
           {testimonials.map((item, index) => {
             return (
               <div
@@ -45,8 +49,7 @@ const Testimonials = () => {
                 key={item.contentfulid}
               >
                 <p className="testimonial-text">{item.testimonial}</p>
-                {/* <Ripple className="testimonial-ripple" /> */}
-                <img src={Drop} className="testimonials-drop" />
+                <img src={Drop} className="testimonial-drop" />
                 <h4 className="testimonial-name">{item.name}</h4>
               </div>
             )
@@ -59,7 +62,6 @@ const Testimonials = () => {
                 className="testimonial-btn-container"
                 key={item.contentfulid}
                 data-sal="slide-down"
-                // data-sal-delay="300"
                 data-sal-easing="ease"
                 data-sal-duration="1200"
               >
