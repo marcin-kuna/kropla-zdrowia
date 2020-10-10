@@ -3,9 +3,6 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import "../styles/services.scss"
-import { BiChevronsRight } from "react-icons/bi"
-import Ripple from "../components/Ripple"
-// import WaveSeparator from "../assets/images/wave-test-5.svg"
 import WaveSeparator from "../assets/images/wave-long.svg"
 import { HiChevronRight } from "react-icons/hi"
 import ServicesWave from "../assets/images/servicesWave.svg"
@@ -21,7 +18,7 @@ const query = graphql`
           description
         }
         image {
-          fluid {
+          fluid(maxWidth: 4000, quality: 100) {
             ...GatsbyContentfulFluid
           }
         }
@@ -39,9 +36,7 @@ const Services = () => {
   return (
     <section className="services section">
       <div className="services-center section-center">
-        <div className="title-container">
-          <h2 className="services-title section-title">Nasza oferta</h2>
-        </div>
+        <h2 className="services-title section-title">Nasza oferta</h2>
         {services.map((item) => {
           return (
             <div className="service" key={item.contentfulid}>
@@ -63,22 +58,26 @@ const Services = () => {
                 data-sal-duration="1500"
               >
                 <h3 className="service-title">{item.title}</h3>
-                <img src={WaveSeparator} alt="" className="wave-separator" />
+                <img
+                  src={WaveSeparator}
+                  alt=""
+                  className="service-info-separator"
+                />
                 <p className="service-description">
                   {item.description.description}
                 </p>
                 <Link
                   to={item.link}
-                  className="section-link-test"
+                  className="spinning-btn service-spinning-btn"
                   data-sal="zoom-in"
-                  data-sal-delay="1500"
+                  data-sal-delay="600"
                   data-sal-easing="ease"
                   data-sal-duration="1500"
                 >
-                  <div className="section-link-test-inner">
-                    <HiChevronRight className="section-btn-icon-test" />
+                  <div className="spinning-btn-inner">
+                    <HiChevronRight className="spinning-btn-icon" />
                   </div>
-                  <svg viewBox="0 0 200 200" className="circle-test">
+                  <svg viewBox="0 0 200 200" className="spinning-btn-svg">
                     <path
                       id="curve"
                       d="M 175, 100 a75,75 0 1,1 0,-1 z"

@@ -83,7 +83,7 @@ const Hero = () => {
           <img
             src={WaveSeparator}
             alt=""
-            className="wave-separator"
+            className="hero-text-separator"
             data-sal="zoom-in"
             data-sal-delay="900"
             data-sal-easing="ease"
