@@ -1,0 +1,61 @@
+@import "core";
+
+.team-title {
+  margin-bottom: 0;
+}
+
+.team {
+  margin-top: 5rem;
+}
+
+.team-member {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  &:nth-of-type(even) {
+    direction: rtl;
+    align-self: flex-end;
+  }
+
+  &-img {
+    // height: 19rem;
+    border-radius: $radius;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &-separator {
+    width: 6rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .team {
+    display: flex;
+    flex-direction: column;
+
+    &-member {
+      width: 80vw;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-member {
+    width: 60vw;
+  }
+}

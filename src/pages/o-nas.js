@@ -2,6 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SubpageLayout from "../components/SubpageLayout"
+import Image from "gatsby-image"
+import "../styles/o-nas.scss"
+import WaveSeparator from "../assets/images/wave-long.svg"
 
 const query = graphql`
   {
@@ -12,6 +15,20 @@ const query = graphql`
         }
       }
     }
+    allContentfulONas(sort: { order: ASC, fields: contentfulid }) {
+      nodes {
+        image {
+          fluid(quality: 100, maxWidth: 4000) {
+            ...GatsbyContentfulFluid
+          }
+        }
+        description {
+          description
+        }
+        name
+        contentfulid
+      }
+    }
   }
 `
 
@@ -20,26 +37,47 @@ const About = () => {
     file: {
       childImageSharp: { fluid },
     },
+    allContentfulONas: { nodes: data },
   } = useStaticQuery(query)
 
   return (
     <Layout>
       <SubpageLayout image={fluid} heading="O zespole">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit
-          consectetur dolore ducimus repellendus, nam nihil nulla reprehenderit
-          unde quibusdam officia? Aliquid ex, dignissimos quas accusamus
-          delectus pariatur veritatis fugiat laudantium vel illum recusandae
-          ipsam? Aliquam velit atque eveniet cupiditate asperiores blanditiis
-          sequi ut provident dolore fugit suscipit explicabo perspiciatis illo
-          dolorem ipsa laboriosam quos corrupti, possimus alias veniam
-          recusandae expedita mollitia doloremque. Accusamus quidem minima
-          consequatur ut ducimus, modi ipsum optio veritatis doloremque
-          similique aspernatur dolorum labore quis expedita, repudiandae, sed
-          quod officiis sapiente? Consectetur necessitatibus quae, repudiandae
-          laborum culpa distinctio sint deserunt esse labore cum similique,
-          ipsam explicabo?
-        </div>
+        <h2 className="team-title section-title">Kto jest kim</h2>
+        <h2 className="team-title section-title">w Kropli Zdrowia?</h2>
+        <section className="team">
+          {data.map((item) => {
+            return (
+              <div className="team-member">
+                <div
+                  data-sal="slide-right"
+                  data-sal-delay="300"
+                  data-sal-easing="ease"
+                  data-sal-duration="1500"
+                >
+                  <Image fluid={item.image.fluid} className="team-member-img" />
+                </div>
+                <div
+                  className="team-member-info"
+                  data-sal="slide-left"
+                  data-sal-delay="300"
+                  data-sal-easing="ease"
+                  data-sal-duration="1500"
+                >
+                  <h3 className="team-member-name">{item.name}</h3>
+                  <img
+                    src={WaveSeparator}
+                    alt=""
+                    className="team-member-separator"
+                  />
+                  <p className="team-member-description">
+                    {item.description.description}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </section>
       </SubpageLayout>
     </Layout>
   )
