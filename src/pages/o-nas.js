@@ -50,7 +50,7 @@ const About = () => {
             return (
               <div className="team-member">
                 <div
-                  data-sal="slide-right"
+                  data-sal="slide-down"
                   data-sal-delay="300"
                   data-sal-easing="ease"
                   data-sal-duration="1500"
@@ -59,7 +59,7 @@ const About = () => {
                 </div>
                 <div
                   className="team-member-info"
-                  data-sal="slide-left"
+                  data-sal="slide-up"
                   data-sal-delay="300"
                   data-sal-easing="ease"
                   data-sal-duration="1500"

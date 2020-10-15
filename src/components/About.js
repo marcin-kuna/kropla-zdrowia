@@ -96,7 +96,7 @@ const WhyUs = () => {
         to="/o-nas"
         className="spinning-btn about-spinning-btn"
         data-sal="zoom-in"
-        data-sal-delay="600"
+        data-sal-delay="500"
         data-sal-easing="ease"
         data-sal-duration="1500"
       >

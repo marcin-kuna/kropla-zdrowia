@@ -1,0 +1,41 @@
+@import "core";
+
+.pool-title {
+  margin-bottom: 0;
+}
+
+.pool-info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pool-info {
+  text-align: center;
+  position: relative;
+  margin-top: 5rem;
+
+  &-logo {
+    position: absolute !important;
+    top: -3rem;
+    left: -1rem;
+    opacity: 0.3;
+    width: 100px;
+  }
+}
+
+.account {
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.green {
+  color: lightgreen;
+  margin-bottom: 0.5rem;
+}
+
+.red {
+  color: tomato;
+  margin-bottom: 0.5rem;
+}
