@@ -4,6 +4,11 @@ import Layout from "../components/Layout"
 import SubpageLayout from "../components/SubpageLayout"
 import "../styles/basen.scss"
 import Image from "gatsby-image"
+import WaveSeparator from "../assets/images/wave-long.svg"
+import { MdLocationOn } from "react-icons/md"
+import { MdChildCare } from "react-icons/md"
+import { MdSchedule } from "react-icons/md"
+import { FaRegMoneyBillAlt } from "react-icons/fa"
 
 const query = graphql`
   {
@@ -58,30 +63,51 @@ const Basen = () => {
           {baseny.map((item) => {
             return (
               <div className="pool-info" key={item.contentfulid}>
-                <Image fluid={item.logo.fluid} className="pool-info-logo" />
-                <h2>{item.name}</h2>
-                <h3>{item.address}</h3>
-                <h3>{item.age}</h3>
-                <h3>Plan zajęć</h3>
-                {item.schedule.content.map((element, index) => {
-                  return (
-                    <p
-                      key={index}
-                      className={`${
-                        element.content[0].value === "(wolne miejsca)"
-                          ? `green`
-                          : element.content[0].value === "(brak miejsc)"
-                          ? `red`
-                          : ""
-                      }`}
-                    >
-                      {element.content[0].value}
-                    </p>
-                  )
-                })}
-                <p>
-                  Cena: {item.price} zł / {item.duration} min
-                </p>
+                <div className="pool-info-logo-container">
+                  <Image fluid={item.logo.fluid} className="pool-info-logo" />
+                </div>
+                <div className="pool-info-text">
+                  <h2>{item.name}</h2>
+                  <img
+                    src={WaveSeparator}
+                    alt=""
+                    className="pool-info-separator"
+                  />
+                  <h3>
+                    <MdLocationOn className="pool-info-icon" />
+                    {item.address}
+                  </h3>
+                  <h3>
+                    <MdChildCare className="pool-info-icon" />
+                    {item.age}
+                  </h3>
+                  <h3>
+                    <FaRegMoneyBillAlt className="pool-info-icon" />
+                    {item.price} zł / {item.duration} min
+                  </h3>
+                  <h3>
+                    <MdSchedule className="pool-info-icon" />
+                    Plan zajęć
+                  </h3>
+                  <div className="pool-info-schedule">
+                    {item.schedule.content.map((element, index) => {
+                      return (
+                        <p
+                          key={index}
+                          className={`${
+                            element.content[0].value === "(wolne miejsca)"
+                              ? `green`
+                              : element.content[0].value === "(brak miejsc)"
+                              ? `red`
+                              : ""
+                          }`}
+                        >
+                          {element.content[0].value}
+                        </p>
+                      )
+                    })}
+                  </div>
+                </div>
               </div>
             )
           })}
