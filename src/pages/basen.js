@@ -9,6 +9,8 @@ import { MdLocationOn } from "react-icons/md"
 import { MdChildCare } from "react-icons/md"
 import { MdSchedule } from "react-icons/md"
 import { FaRegMoneyBillAlt } from "react-icons/fa"
+import Gallery from "@browniebroke/gatsby-image-gallery"
+import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
 const query = graphql`
   {
@@ -41,6 +43,18 @@ const query = graphql`
         price
       }
     }
+    allFile(filter: { sourceInstanceName: { eq: "gallery-pool" } }) {
+      nodes {
+        childImageSharp {
+          thumb: fluid(maxWidth: 270, maxHeight: 270) {
+            ...GatsbyImageSharpFluid
+          }
+          full: fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
   }
 `
 
@@ -50,9 +64,8 @@ const Basen = () => {
       childImageSharp: { fluid },
     },
     allContentfulBaseny: { nodes: baseny },
+    allFile: { nodes: images },
   } = useStaticQuery(query)
-
-  console.log(baseny)
 
   return (
     <Layout>
@@ -112,7 +125,14 @@ const Basen = () => {
             )
           })}
         </section>
-        <h3 className="account">Nr Konta: 84 2490 0005 0000 4600 6531 1730 </h3>
+        {/* <h3 className="account">Nr Konta: 84 2490 0005 0000 4600 6531 1730 </h3> */}
+        <div className="gallery-pool">
+          <Gallery
+            images={images.map((item) => {
+              return item.childImageSharp
+            })}
+          />
+        </div>
       </SubpageLayout>
     </Layout>
   )
