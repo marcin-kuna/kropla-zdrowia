@@ -1,0 +1,87 @@
+@import "core";
+
+.camps-title {
+  margin-bottom: 5rem;
+}
+
+.camps-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 5rem;
+
+  &-btn {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: transparent;
+    background: transparent;
+    border-radius: $radius;
+    outline: none;
+    font-family: $ff-primary;
+    color: $white;
+    display: block;
+    text-align: left;
+
+    &:hover {
+      .camps-nav-image {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &-image-container {
+    &::after {
+      @include image-gradient;
+      border-radius: $radius;
+    }
+  }
+
+  &-image {
+    transition: $transition;
+    border-radius: $radius;
+  }
+
+  &-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  &-name {
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+
+  &-separator {
+    width: 6rem;
+    // margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .camps-nav-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .camps-nav {
+    grid-template-columns: repeat(4, 1fr);
+
+    &-name {
+      font-size: 1.1rem;
+    }
+
+    &-separator {
+      width: 8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .camps-nav-name {
+    font-size: 1.4rem;
+  }
+}

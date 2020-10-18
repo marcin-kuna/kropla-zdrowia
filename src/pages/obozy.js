@@ -2,6 +2,10 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SubpageLayout from "../components/SubpageLayout"
+import Image from "gatsby-image"
+import WaveSeparator from "../assets/images/wave-long.svg"
+import "../styles/obozy.scss"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const query = graphql`
   {
@@ -12,6 +16,41 @@ const query = graphql`
         }
       }
     }
+    allContentfulObozy(sort: { fields: contentfulid, order: ASC }) {
+      nodes {
+        accommodation
+        availability {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        date
+        description {
+          description
+        }
+        food
+        image {
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid
+          }
+        }
+        location
+        name
+        price
+        program {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        transport
+        contentfulid
+        selector
+      }
+    }
   }
 `
 
@@ -20,25 +59,89 @@ const Obozy = () => {
     file: {
       childImageSharp: { fluid },
     },
+    allContentfulObozy: { nodes: camps },
   } = useStaticQuery(query)
+
+  console.log(camps)
 
   return (
     <Layout>
       <SubpageLayout image={fluid} heading="Oferta – Obozy">
+        <h2 className="camps-title section-title">
+          Obozy sportowe i rekreacyjne
+        </h2>
+        <div className="camps-nav">
+          {camps.map((item) => {
+            return (
+              <button
+                className="camps-nav-btn"
+                key={item.contentfulid}
+                onClick={() => scrollTo(`#${item.selector}`)}
+              >
+                <div className="camps-nav-image-container">
+                  <Image
+                    fluid={item.image.fluid}
+                    className="camps-nav-image"
+                    key={item.image.src}
+                    alt=""
+                  />
+                </div>
+                <div className="camps-nav-info">
+                  <h3 className="camps-nav-name">{item.name}</h3>
+                  <img
+                    src={WaveSeparator}
+                    alt=""
+                    className="camps-nav-separator"
+                  />
+                </div>
+              </button>
+            )
+          })}
+        </div>
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est fugit
-          consectetur dolore ducimus repellendus, nam nihil nulla reprehenderit
-          unde quibusdam officia? Aliquid ex, dignissimos quas accusamus
-          delectus pariatur veritatis fugiat laudantium vel illum recusandae
-          ipsam? Aliquam velit atque eveniet cupiditate asperiores blanditiis
-          sequi ut provident dolore fugit suscipit explicabo perspiciatis illo
-          dolorem ipsa laboriosam quos corrupti, possimus alias veniam
-          recusandae expedita mollitia doloremque. Accusamus quidem minima
-          consequatur ut ducimus, modi ipsum optio veritatis doloremque
-          similique aspernatur dolorum labore quis expedita, repudiandae, sed
-          quod officiis sapiente? Consectetur necessitatibus quae, repudiandae
-          laborum culpa distinctio sint deserunt esse labore cum similique,
-          ipsam explicabo?
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
+            nemo earum unde est iusto consequatur asperiores beatae deleniti
+            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
+            hic repellat perspiciatis.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
+            nemo earum unde est iusto consequatur asperiores beatae deleniti
+            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
+            hic repellat perspiciatis.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
+            nemo earum unde est iusto consequatur asperiores beatae deleniti
+            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
+            hic repellat perspiciatis.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
+            nemo earum unde est iusto consequatur asperiores beatae deleniti
+            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
+            hic repellat perspiciatis.
+          </p>
+        </div>
+        <div id={camps[0].selector}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
+            nemo earum unde est iusto consequatur asperiores beatae deleniti
+            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
+            hic repellat perspiciatis.
+          </p>
         </div>
       </SubpageLayout>
     </Layout>
