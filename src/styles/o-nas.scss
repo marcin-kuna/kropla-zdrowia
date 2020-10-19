@@ -14,11 +14,6 @@
   grid-template-columns: 1fr;
   row-gap: 20px;
 
-  &:nth-of-type(even) {
-    direction: rtl;
-    align-self: flex-end;
-  }
-
   &-img {
     // height: 19rem;
     border-radius: $radius;
@@ -50,6 +45,23 @@
       width: 80vw;
       grid-template-columns: 1fr 1fr;
       column-gap: 20px;
+
+      &:nth-of-type(even) {
+        grid-auto-flow: dense;
+        align-self: flex-end;
+
+        .team-member-img-container {
+          grid-column: 2;
+        }
+
+        .team-member-info {
+          text-align: right;
+        }
+
+        .team-member-separator {
+          align-self: flex-end;
+        }
+      }
     }
   }
 }

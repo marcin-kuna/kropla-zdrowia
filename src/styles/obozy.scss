@@ -4,6 +4,7 @@
   margin-bottom: 5rem;
 }
 
+// CAMPS NAV
 .camps-nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -60,9 +61,56 @@
   }
 }
 
+// CAMPS SECTION
+.camp-container {
+  text-align: center;
+}
+
+.camp {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  &-name {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $yellow-4;
+  }
+
+  &-separator {
+    width: 8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-image {
+    height: 19rem;
+    border-radius: $radius;
+  }
+
+  &-description {
+    padding: 1rem;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &-info {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .camps-nav-name {
     font-size: 1.5rem;
+  }
+
+  .camp-separator {
+    width: 10rem;
   }
 }
 
@@ -76,6 +124,31 @@
 
     &-separator {
       width: 8rem;
+    }
+  }
+
+  .camp {
+    grid-template-columns: 1fr 1fr;
+
+    // &:nth-of-type(even) {
+    //   // grid-template-columns: 3fr 2fr;
+    //   grid-auto-flow: dense;
+    //   align-self: flex-end;
+
+    //   .camp-image {
+    //     grid-column: 2;
+    //   }
+    // }
+  }
+
+  .camp-container:nth-of-type(even) {
+    .camp {
+      grid-auto-flow: dense;
+      align-self: flex-end;
+    }
+
+    .camp-image {
+      grid-column: 2;
     }
   }
 }

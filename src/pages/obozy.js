@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import SubpageLayout from "../components/SubpageLayout"
 import Image from "gatsby-image"
 import WaveSeparator from "../assets/images/wave-long.svg"
+import WaveSeparatorYellow from "../assets/images/wave-long-yellow.svg"
 import "../styles/obozy.scss"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -82,7 +83,6 @@ const Obozy = () => {
                   <Image
                     fluid={item.image.fluid}
                     className="camps-nav-image"
-                    key={item.image.src}
                     alt=""
                   />
                 </div>
@@ -98,51 +98,78 @@ const Obozy = () => {
             )
           })}
         </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
-            nemo earum unde est iusto consequatur asperiores beatae deleniti
-            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
-            hic repellat perspiciatis.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
-            nemo earum unde est iusto consequatur asperiores beatae deleniti
-            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
-            hic repellat perspiciatis.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
-            nemo earum unde est iusto consequatur asperiores beatae deleniti
-            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
-            hic repellat perspiciatis.
-          </p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
-            nemo earum unde est iusto consequatur asperiores beatae deleniti
-            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
-            hic repellat perspiciatis.
-          </p>
-        </div>
-        <div id={camps[0].selector}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            amet. Consectetur sequi deserunt nostrum natus nesciunt, harum in
-            nemo earum unde est iusto consequatur asperiores beatae deleniti
-            culpa ipsum reiciendis rerum, veritatis debitis iure! Ratione ea aut
-            hic repellat perspiciatis.
-          </p>
-        </div>
+        <section className="camps-container">
+          {camps.map((item) => {
+            return (
+              <div
+                className="camp-container"
+                key={item.contentfulid}
+                id={item.selector}
+              >
+                <h2 className="camp-name">{item.name}</h2>
+                <img
+                  src={WaveSeparatorYellow}
+                  alt=""
+                  className="camp-separator"
+                />
+                <div
+                  className="camp"
+                  key={item.contentfulid}
+                  id={item.selector}
+                >
+                  <Image
+                    fluid={item.image.fluid}
+                    className="camp-image"
+                    alt=""
+                  />
+
+                  <div className="camp-info">
+                    <p className="camp-description">
+                      {item.description.description}
+                    </p>
+                    <h3>Program</h3>
+                    <div className="camp-program">
+                      {item.program.content.map((element, index) => {
+                        return <p key={index}>{element.content[0].value}</p>
+                      })}
+                    </div>
+                    <h3>Termin</h3>
+                    <p className="camp-date">{item.date}</p>
+                    <h3>Miejsce</h3>
+                    <p className="camp-location">{item.location}</p>
+                    <h3>Zakwaterowanie</h3>
+                    <p className="camp-accomodation">{item.accommodation}</p>
+                    <h3>Wyżywienie</h3>
+                    <p className="camp-food">{item.food}</p>
+                    <h3>Transport</h3>
+                    <p className="camp-transport">{item.transport}</p>
+                    <h3>Cena</h3>
+                    <p className="camp-price">{item.price}</p>
+                    <h3>Dostępność</h3>
+                    <div className="camp-availability">
+                      {item.availability.content.map((element, index) => {
+                        return (
+                          <p
+                            key={index}
+                            className={`${
+                              element.content[0].value === "wolne miejsca"
+                                ? `green`
+                                : element.content[0].value === "brak miejsc"
+                                ? `red`
+                                : ""
+                            }`}
+                          >
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </section>
       </SubpageLayout>
     </Layout>
   )
