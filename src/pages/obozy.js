@@ -15,7 +15,8 @@ import {
   FaRegQuestionCircle,
 } from "react-icons/fa"
 import { AiOutlineSchedule } from "react-icons/ai"
-import CampsWave from "../assets/images/campsWave.svg"
+import CampsWaveDark from "../assets/images/campsWaveDark.svg"
+import CampsWaveLight from "../assets/images/campsWaveLight.svg"
 
 const query = graphql`
   {
@@ -107,7 +108,11 @@ const Obozy = () => {
               </button>
             )
           })}
-          <img src={CampsWave} alt="" className="camps-wave camps-wave-nav" />
+          <img
+            src={CampsWaveDark}
+            alt=""
+            className="camp-wave camps-wave-nav"
+          />
         </div>
 
         <section className="camps-container">
@@ -219,9 +224,14 @@ const Obozy = () => {
 
                 {/* </div> */}
                 <img
-                  src={CampsWave}
+                  src={CampsWaveDark}
                   alt=""
-                  className="camps-wave camps-wave-dark"
+                  className="camp-wave camp-wave-dark"
+                />
+                <img
+                  src={CampsWaveLight}
+                  alt=""
+                  className="camp-wave camp-wave-light"
                 />
               </div>
             )
