@@ -69,7 +69,10 @@ const Kontakt = () => {
                 <textarea id="message" name="message"></textarea>
               </div>
 
-              <input type="submit" name="submit" value="Wyślij!" />
+              {/* <input type="submit" value="Wyślij!" /> */}
+              <button className="submit-btn" type="submit">
+                Wyślij!
+              </button>
             </form>
           </div>
         </section>
