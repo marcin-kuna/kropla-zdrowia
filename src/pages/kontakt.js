@@ -53,7 +53,8 @@ const Kontakt = () => {
             <SocialLinks />
           </div>
           <div class="form-wrapper">
-            <form name="contact-form" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               <div class="formgroup" id="name-form">
                 <label for="name">Twoje imię</label>
                 <input type="text" id="name" name="name" />
