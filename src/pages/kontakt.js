@@ -57,7 +57,7 @@ const Kontakt = () => {
               name="contact"
               method="POST"
               data-netlify="true"
-              action="/pages/success"
+              action="/src/pages/success"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div class="formgroup" id="name-form">
