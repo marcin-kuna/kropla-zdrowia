@@ -69,7 +69,7 @@ const Kontakt = () => {
                 <textarea id="message" name="message"></textarea>
               </div>
 
-              <input type="submit" value="Wyślij!" />
+              <input type="submit" name="submit" value="Wyślij!" />
             </form>
           </div>
         </section>
