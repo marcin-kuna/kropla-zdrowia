@@ -55,24 +55,22 @@ const Kontakt = () => {
           <div class="form-wrapper">
             <form name="contact-form" method="POST" data-netlify="true">
               <div class="formgroup" id="name-form">
-                <label htmlFor="name">Twoje imię</label>
+                <label for="name">Twoje imię</label>
                 <input type="text" id="name" name="name" />
               </div>
 
               <div class="formgroup" id="email-form">
-                <label htmlFor="email">Twój e-mail</label>
+                <label for="email">Twój e-mail</label>
                 <input type="email" id="email" name="email" />
               </div>
 
               <div class="formgroup" id="message-form">
-                <label htmlFor="message">Twoja wiadomość</label>
+                <label for="message">Twoja wiadomość</label>
                 <textarea id="message" name="message"></textarea>
               </div>
 
-              {/* <input type="submit" value="Wyślij!" /> */}
-              <button className="submit-btn" type="submit">
-                Wyślij!
-              </button>
+              <input type="submit" value="Wyślij!" />
+              {/* <button className='submit-btn' type='submit'>Wyślij!</button> */}
             </form>
           </div>
         </section>
