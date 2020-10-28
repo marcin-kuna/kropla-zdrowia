@@ -104,7 +104,6 @@ textarea {
 }
 
 input[type="submit"] {
-  // .submit-btn {
   display: block;
   width: 50%;
   background-color: $yellow-4;
@@ -121,7 +120,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  // .submit-btn {
   background-color: $white;
   border: solid 3px $yellow-4;
   color: $yellow-4;

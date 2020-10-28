@@ -172,9 +172,35 @@ a {
   }
 }
 
-// Btn Kacpra
+// 404 + Form Submit Success
+.back {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -5rem;
 
-.section-btn {
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &-icon {
+    margin-left: 0.5rem;
+    position: relative;
+    top: 5px;
+  }
+
+  .spinning-btn-icon {
+    position: relative;
+    left: -3px;
+  }
+}
+
+// Btn Kacpra
+.back-btn {
   display: block;
   width: 160px;
   height: 45px;

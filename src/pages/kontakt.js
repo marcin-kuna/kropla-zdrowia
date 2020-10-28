@@ -53,25 +53,26 @@ const Kontakt = () => {
             <SocialLinks />
           </div>
           <div class="form-wrapper">
-            <form name="contact" method="POST" data-netlify="true">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              action="/pages/success"
+            >
               <input type="hidden" name="form-name" value="contact" />
               <div class="formgroup" id="name-form">
-                <label for="name">Twoje imię</label>
+                <label htmlFor="name">Twoje imię</label>
                 <input type="text" id="name" name="name" />
               </div>
-
               <div class="formgroup" id="email-form">
-                <label for="email">Twój e-mail</label>
+                <label htmlFor="email">Twój e-mail</label>
                 <input type="email" id="email" name="email" />
               </div>
-
               <div class="formgroup" id="message-form">
-                <label for="message">Twoja wiadomość</label>
+                <label htmlFor="message">Twoja wiadomość</label>
                 <textarea id="message" name="message"></textarea>
               </div>
-
               <input type="submit" value="Wyślij!" />
-              {/* <button className='submit-btn' type='submit'>Wyślij!</button> */}
             </form>
           </div>
         </section>
