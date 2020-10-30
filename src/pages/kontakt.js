@@ -54,7 +54,7 @@ const Kontakt = () => {
             </div>
             <SocialLinks />
           </div>
-          <div class="form-wrapper">
+          <div className="form-wrapper">
             <form
               name="contact"
               method="POST"
@@ -62,15 +62,15 @@ const Kontakt = () => {
               action="/success"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <div class="formgroup" id="name-form">
+              <div className="formgroup" id="name-form">
                 <label htmlFor="name">Twoje imię</label>
                 <input type="text" id="name" name="name" />
               </div>
-              <div class="formgroup" id="email-form">
+              <div className="formgroup" id="email-form">
                 <label htmlFor="email">Twój e-mail</label>
                 <input type="email" id="email" name="email" />
               </div>
-              <div class="formgroup" id="message-form">
+              <div className="formgroup" id="message-form">
                 <label htmlFor="message">Twoja wiadomość</label>
                 <textarea id="message" name="message"></textarea>
               </div>
