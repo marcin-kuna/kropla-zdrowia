@@ -24,6 +24,10 @@ const Head = ({ title }) => {
       title={`${title} | ${siteMetadata.title}`}
       description={siteMetadata.description}
       viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      meta={{
+        property: `og:image`,
+        content: "/src/assets/images/basen.jpg",
+      }}
     />
   )
 }
