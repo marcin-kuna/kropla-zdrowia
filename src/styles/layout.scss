@@ -326,6 +326,10 @@ a {
 }
 
 // Social links right side fixed
+.social-links-fixed {
+  display: none;
+}
+
 @media screen and (min-width: 1366px) {
   .social-links-fixed {
     display: flex;

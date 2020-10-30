@@ -14,6 +14,18 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
         threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
