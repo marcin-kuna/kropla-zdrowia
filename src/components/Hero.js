@@ -5,7 +5,6 @@ import Image from "gatsby-image"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import SocialLinks from "../constants/socialLinks"
 import Drop from "../assets/images/drop3.svg"
 import { HiChevronDown } from "react-icons/hi"
 import scrollTo from "gatsby-plugin-smoothscroll"
@@ -112,7 +111,6 @@ const Hero = () => {
           <HiChevronDown className="hero-btn-icon" />
         </a>
       </div>
-      <SocialLinks />
       <img src={HeroWaveTop} alt="" className="hero-wave hero-wave-top" />
       <img src={HeroWaveBottom} alt="" className="hero-wave" />
     </section>

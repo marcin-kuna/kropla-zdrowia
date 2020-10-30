@@ -2,10 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import { HiChevronLeft } from "react-icons/hi"
 import { FaRegFrown } from "react-icons/fa"
+import Head from "../components/Head"
 
 const Success = () => {
   return (
     <div className="back">
+      <Head title="404" />
       <h2
         data-sal="zoom-in"
         data-sal-delay="200"

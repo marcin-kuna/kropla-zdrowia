@@ -2,6 +2,11 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  siteMetadata: {
+    title: `Kropla Zdrowia`,
+    siteUrl: `https://www.kropla-zdrowia.netlify.app`,
+    description: `Zobacz bogatą ofertę obozów letnich dla dzieci (m.in. obóz żeglarski, językowy, kolonie dla najmłodszych) oraz zajęć na basenie (szkółka pływacka).`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,

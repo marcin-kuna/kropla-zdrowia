@@ -17,6 +17,8 @@ import {
 import { AiOutlineSchedule } from "react-icons/ai"
 import CampsWaveDark from "../assets/images/campsWaveDark.svg"
 import CampsWaveLight from "../assets/images/campsWaveLight.svg"
+import SocialLinks from "../constants/socialLinks"
+import Head from "../components/Head"
 
 const query = graphql`
   {
@@ -77,6 +79,7 @@ const Obozy = () => {
 
   return (
     <Layout>
+      <Head title="Obozy" />
       <SubpageLayout image={fluid} heading="Oferta – Obozy">
         <h2 className="camps-title section-title">
           Obozy sportowe i rekreacyjne
@@ -238,6 +241,7 @@ const Obozy = () => {
           })}
         </section>
       </SubpageLayout>
+      <SocialLinks styleClass="social-links-fixed" />
     </Layout>
   )
 }

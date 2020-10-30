@@ -9,6 +9,8 @@ import { MdLocationOn, MdChildCare, MdSchedule } from "react-icons/md"
 import { FaRegMoneyBillAlt } from "react-icons/fa"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
+import SocialLinks from "../constants/socialLinks"
+import Head from "../components/Head"
 
 const query = graphql`
   {
@@ -67,6 +69,7 @@ const Basen = () => {
 
   return (
     <Layout>
+      <Head title="Basen" />
       <SubpageLayout image={fluid} heading="Oferta – Basen">
         <h2 className="pool-title section-title">Szkółka pływacka</h2>
         <h2 className="pool-title section-title">Dla dzieci</h2>
@@ -132,6 +135,7 @@ const Basen = () => {
           />
         </div>
       </SubpageLayout>
+      <SocialLinks styleClass="social-links-fixed" />
     </Layout>
   )
 }

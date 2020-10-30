@@ -123,55 +123,6 @@ a {
   color: $blue-1;
 }
 
-// Ripple
-
-.ripple {
-  border-radius: 50%;
-}
-
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-
-  &-1 {
-    width: 20%;
-    height: 20%;
-    z-index: 5;
-  }
-
-  &-2 {
-    width: 40%;
-    height: 40%;
-    opacity: 0.8;
-    z-index: 4;
-  }
-
-  &-3 {
-    width: 60%;
-    height: 60%;
-    opacity: 0.6;
-    z-index: 3;
-  }
-
-  &-4 {
-    width: 80%;
-    height: 80%;
-    opacity: 0.4;
-    z-index: 2;
-  }
-
-  &-5 {
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    z-index: 1;
-  }
-}
-
 // 404 + Form Submit Success
 .back {
   width: 100vw;
@@ -371,5 +322,60 @@ a {
 @media screen and (min-width: 1200px) {
   .page-section {
     padding-bottom: 15rem;
+  }
+}
+
+// Social links right side fixed
+@media screen and (min-width: 1366px) {
+  .social-links-fixed {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 11rem;
+    margin: 0;
+    margin-right: 0.3rem;
+    z-index: 200;
+
+    li:first-of-type .social-link {
+      background-color: #3b5999;
+
+      &:hover {
+        background-color: $yellow-4;
+      }
+    }
+    li:nth-of-type(2) .social-link {
+      background-color: #e4405f;
+
+      &:hover {
+        background-color: $yellow-4;
+      }
+    }
+    li:nth-of-type(3) .social-link {
+      background-color: #cd201f;
+
+      &:hover {
+        background-color: $yellow-4;
+      }
+    }
+
+    .social-link {
+      width: 3.5rem;
+      height: 3.5rem;
+      border: none;
+      border-radius: 50%;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: $white; // general style overwrite
+      }
+    }
   }
 }

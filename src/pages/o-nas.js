@@ -5,6 +5,8 @@ import SubpageLayout from "../components/SubpageLayout"
 import Image from "gatsby-image"
 import "../styles/o-nas.scss"
 import WaveSeparator from "../assets/images/wave-long.svg"
+import SocialLinks from "../constants/socialLinks"
+import Head from "../components/Head"
 
 const query = graphql`
   {
@@ -42,6 +44,7 @@ const About = () => {
 
   return (
     <Layout>
+      <Head title="O nas" />
       <SubpageLayout image={fluid} heading="O zespole">
         <h2 className="team-title section-title">Kto jest kim</h2>
         <h2 className="team-title section-title">w Kropli Zdrowia?</h2>
@@ -80,6 +83,7 @@ const About = () => {
           })}
         </section>
       </SubpageLayout>
+      <SocialLinks styleClass="social-links-fixed" />
     </Layout>
   )
 }

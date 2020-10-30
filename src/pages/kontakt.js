@@ -6,6 +6,7 @@ import "../styles/kontakt.scss"
 import SocialLinks from "../constants/socialLinks"
 import { MdLocationOn, MdEmail } from "react-icons/md"
 import { FaPhone, FaPiggyBank } from "react-icons/fa"
+import Head from "../components/Head"
 
 const query = graphql`
   {
@@ -28,6 +29,7 @@ const Kontakt = () => {
 
   return (
     <Layout>
+      <Head title="Kontakt" />
       <SubpageLayout image={fluid} heading="Skontaktuj się!">
         <section className="contact">
           <div className="contact-info">
