@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
-import MetaImage from "../assets/images/basen.jpg"
 
 const query = graphql`
   {
@@ -10,6 +9,7 @@ const query = graphql`
         title
         description
         siteUrl
+        image
       }
     }
   }
@@ -35,7 +35,7 @@ const Head = ({ title }) => {
       />
       <meta property="og:title" content={`${title} | ${siteMetadata.title}`} />
       <meta property="og:description" content={siteMetadata.description} />
-      <meta property="og:image" content={MetaImage} />
+      <meta property="og:image" content={siteMetadata.image} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
     </Helmet>
   )

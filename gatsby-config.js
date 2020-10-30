@@ -6,6 +6,7 @@ module.exports = {
     title: `Kropla Zdrowia`,
     siteUrl: `https://www.kropla-zdrowia.netlify.app`,
     description: `Zobacz bogatą ofertę obozów letnich dla dzieci (m.in. obóz żeglarski, językowy, kolonie dla najmłodszych) oraz zajęć na basenie (szkółka pływacka).`,
+    image: `/src/assets/images/basen.jpg`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -19,8 +20,8 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `003aa6`,
+        theme_color: `003aa6`,
         display: `standalone`,
         icon: `src/assets/images/favicon.png`,
       },
