@@ -49,7 +49,7 @@ const Testimonials = () => {
               >
                 <p className="testimonial-text">{item.testimonial}</p>
                 <img src={Drop} className="testimonial-drop" alt="" />
-                <h4 className="testimonial-name">{item.name}</h4>
+                <p className="testimonial-name">{item.name}</p>
               </div>
             )
           })}
@@ -71,6 +71,7 @@ const Testimonials = () => {
                   className={`testimonial-btn ${
                     index === value && "testimonial-active-btn"
                   }`}
+                  aria-label="Testimonial"
                 >
                   <div className="testimonial-img-container">
                     <Image

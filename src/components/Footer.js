@@ -21,10 +21,10 @@ const Footer = () => {
         </div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
       </div>
-      <h4>
+      <p className="footer-copy">
         copyright&copy;{new Date().getFullYear()}
         <span>Kropla Zdrowia</span> – Wszelkie prawa zastrzeżone
-      </h4>
+      </p>
     </footer>
   )
 }

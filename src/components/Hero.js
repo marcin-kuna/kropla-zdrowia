@@ -106,6 +106,7 @@ const Hero = () => {
           data-sal="slide-down"
           data-sal-easing="ease"
           data-sal-duration="1500"
+          aria-label="Down"
         >
           <img src={Drop} className="hero-btn-drop" alt="" />
           <HiChevronDown className="hero-btn-icon" />

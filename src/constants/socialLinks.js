@@ -9,17 +9,32 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    icon: (
+      <FaFacebookSquare
+        className="social-icon"
+        aria-label="Facebook"
+      ></FaFacebookSquare>
+    ),
     url: "https://www.facebook.com/kroplazdrowiaradom",
   },
   {
     id: 2,
-    icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
+    icon: (
+      <FaInstagramSquare
+        className="social-icon"
+        aria-label="Instagram"
+      ></FaInstagramSquare>
+    ),
     url: "https://www.facebook.com/kroplazdrowiaradom",
   },
   {
     id: 3,
-    icon: <FaYoutubeSquare className="social-icon"></FaYoutubeSquare>,
+    icon: (
+      <FaYoutubeSquare
+        className="social-icon"
+        aria-label="Youtube"
+      ></FaYoutubeSquare>
+    ),
     url: "https://www.facebook.com/kroplazdrowiaradom",
   },
   // {
