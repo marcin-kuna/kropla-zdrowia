@@ -17,7 +17,7 @@
 }
 
 .service {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   position: relative;
 
   &-info {
@@ -62,6 +62,8 @@
 
   &-spinning-btn {
     position: absolute;
+    bottom: -3.5rem;
+    left: 75%;
 
     svg text {
       letter-spacing: 3px;
@@ -77,6 +79,11 @@
 
   .service-img {
     height: 22rem;
+  }
+
+  .service-spinning-btn {
+    left: 80%;
+    bottom: -0.5rem;
   }
 }
 @media screen and (min-width: 992px) {
