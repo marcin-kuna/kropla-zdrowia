@@ -74,7 +74,9 @@ const Kontakt = () => {
                 <label htmlFor="message">Twoja wiadomość</label>
                 <textarea id="message" name="message"></textarea>
               </div>
-              <input type="submit" value="Wyślij!" />
+              <button type="submit" className="submit-btn">
+                Wyślij!
+              </button>
             </form>
           </div>
         </section>
