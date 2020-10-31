@@ -17,13 +17,13 @@ const Footer = () => {
           <p>(+48) 603 952 902</p>
           <p>NIP: 796-226-16-70</p>
           <p>REGON: 672877464</p>
-          <p>Nr Konta: 84 2490 0005 0000 4600 6531 1730</p>
+          <p>Konto: 84 2490 0005 0000 4600 6531 1730</p>
         </div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
       </div>
       <p className="footer-copy">
         copyright&copy;{new Date().getFullYear()}
-        <span>Kropla Zdrowia</span> – Wszelkie prawa zastrzeżone
+        <span>Kropla Zdrowia</span> | Wszelkie prawa zastrzeżone
       </p>
     </footer>
   )

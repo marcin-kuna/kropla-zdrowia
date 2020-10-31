@@ -62,15 +62,15 @@ const Kontakt = () => {
               action="/success"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <div className="formgroup" id="name-form">
+              <div id="name-form">
                 <label htmlFor="name">Twoje imię</label>
                 <input type="text" id="name" name="name" />
               </div>
-              <div className="formgroup" id="email-form">
+              <div id="email-form">
                 <label htmlFor="email">Twój e-mail</label>
                 <input type="email" id="email" name="email" />
               </div>
-              <div className="formgroup" id="message-form">
+              <div id="message-form">
                 <label htmlFor="message">Twoja wiadomość</label>
                 <textarea id="message" name="message"></textarea>
               </div>
