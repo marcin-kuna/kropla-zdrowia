@@ -31,7 +31,6 @@ const Services = () => {
   const {
     allContentfulServices: { nodes: services },
   } = useStaticQuery(query)
-  const { title, description, image, link } = services
 
   return (
     <section className="services section">

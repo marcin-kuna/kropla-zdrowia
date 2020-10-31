@@ -27,7 +27,6 @@ const Testimonials = () => {
     allContentfulTestimonials: { nodes: testimonials },
   } = useStaticQuery(query)
   const [value, setValue] = React.useState(1)
-  const { name, testimonial, image } = testimonials
 
   return (
     <section className="testimonials section">
@@ -49,7 +48,7 @@ const Testimonials = () => {
                 key={item.contentfulid}
               >
                 <p className="testimonial-text">{item.testimonial}</p>
-                <img src={Drop} className="testimonial-drop" />
+                <img src={Drop} className="testimonial-drop" alt="" />
                 <h4 className="testimonial-name">{item.name}</h4>
               </div>
             )

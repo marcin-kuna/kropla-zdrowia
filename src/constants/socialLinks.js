@@ -3,7 +3,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaYoutubeSquare,
-  FaEnvelopeSquare,
+  // FaEnvelopeSquare,
 } from "react-icons/fa"
 
 const data = [

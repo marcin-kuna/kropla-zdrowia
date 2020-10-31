@@ -34,9 +34,7 @@ const WhyUs = () => {
   const [value, setValue] = React.useState(1)
   const {
     description: { description },
-    image,
   } = informations[value]
-  console.log(informations)
 
   return (
     <section className="about section" id="about">

@@ -22,9 +22,9 @@
     // object-position: center;
   }
 
-  &::after {
-    // @include image-gradient;
-  }
+  // &::after {
+  //   @include image-gradient;
+  // }
 
   &-center {
     width: 100%;
@@ -66,6 +66,9 @@
     cursor: pointer;
     z-index: 10;
     transition: $transition;
+    background-color: transparent;
+    outline: none;
+    border: none;
 
     &-drop {
       width: 45px;

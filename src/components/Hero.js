@@ -100,16 +100,16 @@ const Hero = () => {
             soluta culpa.
           </p>
         </div>
-        <a
+        <button
           onClick={() => scrollTo("#about")}
           className="hero-btn"
           data-sal="slide-down"
           data-sal-easing="ease"
           data-sal-duration="1500"
         >
-          <img src={Drop} className="hero-btn-drop" />
+          <img src={Drop} className="hero-btn-drop" alt="" />
           <HiChevronDown className="hero-btn-icon" />
-        </a>
+        </button>
       </div>
       <img src={HeroWaveTop} alt="" className="hero-wave hero-wave-top" />
       <img src={HeroWaveBottom} alt="" className="hero-wave" />

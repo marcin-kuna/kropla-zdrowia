@@ -20,11 +20,7 @@ const Head = ({ title }) => {
   } = useStaticQuery(query)
 
   return (
-    <Helmet
-    // title={`${title} | ${siteMetadata.title}`}
-    // description={siteMetadata.description}
-    // viewport="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    >
+    <Helmet>
       <html lang="pl" />
       <title>{`${title} | ${siteMetadata.title}`}</title>
       <meta name="description" content={siteMetadata.description} />
