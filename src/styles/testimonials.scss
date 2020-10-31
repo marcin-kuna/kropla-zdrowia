@@ -59,7 +59,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0;
 
   &-active {
     opacity: 1;
@@ -166,6 +166,7 @@
     padding: 2rem;
     grid-column: span 4;
     transition: $transition;
+    opacity: 0.3;
 
     &-btns {
       width: 360px;
