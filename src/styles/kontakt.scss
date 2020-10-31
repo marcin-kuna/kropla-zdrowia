@@ -106,14 +106,12 @@ textarea {
 }
 
 .submit-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   border-radius: $radius;
   outline: none;
   height: 3.5rem;
   width: 50%;
-  min-width: 200px;
+  // min-width: 200px;
   background-color: $yellow-4;
   color: $white;
   cursor: pointer;
@@ -127,6 +125,9 @@ textarea {
   border: solid 3px transparent;
   // position: relative;
 
+  span {
+    margin: auto;
+  }
   // span {
   //   position: absolute;
   //   top: 50%;

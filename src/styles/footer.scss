@@ -21,14 +21,24 @@
   &-copy {
     margin: 0;
     padding: 2rem 0;
-    color: $white;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     opacity: 0.8;
 
-    span {
-      color: $blue-1;
+    p {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      span {
+        color: $blue-1;
+        opacity: 1;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
     }
   }
 
@@ -60,6 +70,15 @@
   .footer-center {
     grid-template-columns: repeat(4, 1fr);
     padding-top: 0;
+  }
+
+  .footer-copy {
+    flex-direction: row;
+
+    p:nth-child(2) {
+      display: block;
+      padding: 0 0.2rem;
+    }
   }
 }
 
