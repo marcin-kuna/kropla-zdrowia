@@ -95,9 +95,10 @@ const Hero = () => {
             data-sal-easing="ease"
             data-sal-duration="1500"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            delectus nihil eius possimus quod architecto porro cumque assumenda
-            soluta culpa.
+            Nasze obozy to sport, przygoda, wypoczynek, to szerokie spektrum
+            zajęć sportowych, gier i zabaw integracyjnych i terenowych, to
+            wykwalifikowana i zaangażowana kadra pozytywnie zakręconych
+            instruktorów i wychowawców.
           </p>
         </div>
         <button
