@@ -78,11 +78,12 @@
 
 .camp-wave {
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: -10vw;
   width: 100vw;
 
   &-nav {
+    bottom: -8px;
     z-index: 0;
   }
 }
