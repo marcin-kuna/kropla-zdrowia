@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding-bottom: 15rem;
+  padding-bottom: 7rem;
   position: relative;
 
   & > * {
@@ -60,10 +60,11 @@
     margin: 0;
     letter-spacing: 2px;
     font-size: 1rem;
+    line-height: 1;
   }
 
   &-separator {
-    width: 6rem;
+    display: none;
   }
 }
 
@@ -207,9 +208,26 @@
   margin-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 412px) {
+  .camps-nav-separator {
+    display: block;
+    width: 6rem;
+    margin-top: 5px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .camps-nav-name {
-    font-size: 1.5rem;
+  .camps-nav {
+    padding-bottom: 10rem;
+
+    &-name {
+      line-height: 1.2;
+      font-size: 1.5rem;
+    }
+
+    &-separator {
+      margin: 0.5rem 0;
+    }
   }
 
   .camp-separator {
@@ -242,9 +260,7 @@
   }
 
   .camp-details {
-    // margin: 0 auto;
     width: 40vw;
-    // grid-template-columns: 1fr 1fr;
 
     &-icon {
       top: 5px;
@@ -277,8 +293,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .camps-nav-name {
-    font-size: 1.4rem;
+  .camps-nav {
+    padding-bottom: 15rem;
+
+    &-name {
+      font-size: 1.4rem;
+    }
   }
 
   .camp-wave,
