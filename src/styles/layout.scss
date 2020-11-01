@@ -151,37 +151,6 @@ a {
   }
 }
 
-// Btn Kacpra
-.back-btn {
-  display: block;
-  width: 160px;
-  height: 45px;
-  border-radius: $radius;
-  color: $blue-4;
-  background-color: $yellow-4;
-  font-family: $ff-secondary;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-
-  &-icon {
-    font-size: 1.6rem;
-    transition: $transition;
-    position: relative;
-    left: 0;
-  }
-
-  &:hover {
-    .section-btn-icon {
-      left: 5px;
-    }
-  }
-}
-
 // Spinning Btn
 @keyframes rotating {
   from {

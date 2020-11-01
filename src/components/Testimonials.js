@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/testimonials.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import Drop from "../assets/images/drop3.svg"
+import Drop from "../assets/images/drop.svg"
 import TestimonialsWave from "../assets/images/testimonialsWave.svg"
 
 const query = graphql`

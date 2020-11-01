@@ -133,18 +133,12 @@ const Obozy = () => {
         <section className="camps-container">
           {camps.map((item) => {
             return (
-              <div
-                // className="camp-container"
-                className="camp"
-                key={item.contentfulid}
-                id={item.selector}
-              >
+              <div className="camp" key={item.contentfulid} id={item.selector}>
                 <h2
                   className="camp-name"
-                  data-sal="zoom-in"
+                  data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1200"
-                  data-sal-delay="300"
                 >
                   {item.name}
                 </h2>
@@ -152,18 +146,17 @@ const Obozy = () => {
                   src={WaveSeparatorYellow}
                   alt=""
                   className="camp-separator"
-                  data-sal="zoom-in"
+                  data-sal="fade"
                   data-sal-easing="ease"
-                  data-sal-duration="1200"
+                  data-sal-duration="1000"
                   data-sal-delay="300"
                 />
-                {/* <div className="camp"> */}
                 <div
                   className="camp-info"
                   data-sal="fade"
                   data-sal-easing="ease"
-                  data-sal-duration="1200"
-                  data-sal-delay="500"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
                 >
                   <Image
                     fluid={item.image.fluid}
@@ -178,7 +171,6 @@ const Obozy = () => {
                   data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1000"
-                  data-sal-delay="300"
                 >
                   <AiOutlineSchedule className="camp-details-icon" />
                   Program
@@ -188,7 +180,6 @@ const Obozy = () => {
                   data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1000"
-                  data-sal-delay="300"
                 >
                   {item.program.content.map((element, index) => {
                     return (
@@ -204,7 +195,6 @@ const Obozy = () => {
                   data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1000"
-                  data-sal-delay="300"
                 >
                   <div className="camp-details-container">
                     <h3>
@@ -253,7 +243,6 @@ const Obozy = () => {
                   data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1000"
-                  data-sal-delay="300"
                 >
                   <FaRegQuestionCircle className="camp-details-icon" />
                   Dostępność
@@ -263,7 +252,6 @@ const Obozy = () => {
                   data-sal="fade"
                   data-sal-easing="ease"
                   data-sal-duration="1000"
-                  data-sal-delay="300"
                 >
                   {item.availability.content.map((element, index) => {
                     return (

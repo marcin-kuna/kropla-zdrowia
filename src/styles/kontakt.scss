@@ -123,17 +123,10 @@ textarea {
   letter-spacing: 0.1rem;
   transition: $transition;
   border: solid 3px transparent;
-  // position: relative;
 
   span {
     margin: auto;
   }
-  // span {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  // }
 }
 
 .submit-btn:hover {
