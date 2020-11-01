@@ -76,7 +76,13 @@ const Basen = () => {
         <section className="pool-info-container">
           {baseny.map((item) => {
             return (
-              <div className="pool-info" key={item.contentfulid}>
+              <div
+                className="pool-info"
+                key={item.contentfulid}
+                data-sal="fade"
+                data-sal-easing="ease"
+                data-sal-duration="1500"
+              >
                 <div className="pool-info-logo-container">
                   <Image fluid={item.logo.fluid} className="pool-info-logo" />
                 </div>
@@ -129,7 +135,7 @@ const Basen = () => {
         {/* <h3 className="account">Nr Konta: 84 2490 0005 0000 4600 6531 1730 </h3> */}
         <section className="gallery-section-pool">
           <h2 className="section-title">Basen - Galeria</h2>
-          <div className="gallery">
+          <div>
             <Gallery
               images={images.map((item) => {
                 return item.childImageSharp

@@ -34,7 +34,7 @@
 
     &-separator {
       width: 6rem;
-      margin: 0.3rem 0;
+      margin: 0.1rem 0 0;
     }
   }
 
@@ -42,12 +42,13 @@
     white-space: nowrap;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 0.15rem;
   }
 
   &-description {
     padding: 0.5rem 0;
     z-index: 5;
-    line-height: 1.25rem;
+    line-height: 1rem;
   }
 
   &-img {
@@ -71,6 +72,18 @@
   }
 }
 
+@media screen and (min-width: 412px) {
+  .service-info-separator {
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .service-description {
+    line-height: 1.25;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .service-info {
     height: 22rem;
@@ -79,6 +92,10 @@
 
   .service-img {
     height: 22rem;
+  }
+
+  .service-description {
+    line-height: 1.5;
   }
 
   .service-spinning-btn {
@@ -93,6 +110,7 @@
 
     &-title {
       font-size: 1.35rem;
+      margin-bottom: 0.5rem;
     }
 
     &-img {
@@ -102,7 +120,7 @@
       border-radius: 50%;
       position: absolute !important;
       z-index: 0;
-      border: 2px solid white;
+      border: 2px solid $white;
     }
 
     &-info {
@@ -168,10 +186,6 @@
     &-info-separator {
       width: 8rem;
       margin: 0.5rem 0;
-    }
-
-    &-description {
-      line-height: 1.5rem;
     }
   }
 }

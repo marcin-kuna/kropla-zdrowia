@@ -105,6 +105,9 @@ const Obozy = () => {
                 className="camps-nav-btn"
                 key={item.contentfulid}
                 onClick={() => scrollTo(`#${item.selector}`)}
+                data-sal="zoom-in"
+                data-sal-easing="ease"
+                data-sal-duration="1000"
               >
                 <div className="camps-nav-image-container">
                   <Image
@@ -136,14 +139,32 @@ const Obozy = () => {
                 key={item.contentfulid}
                 id={item.selector}
               >
-                <h2 className="camp-name">{item.name}</h2>
+                <h2
+                  className="camp-name"
+                  data-sal="zoom-in"
+                  data-sal-easing="ease"
+                  data-sal-duration="1200"
+                  data-sal-delay="300"
+                >
+                  {item.name}
+                </h2>
                 <img
                   src={WaveSeparatorYellow}
                   alt=""
                   className="camp-separator"
+                  data-sal="zoom-in"
+                  data-sal-easing="ease"
+                  data-sal-duration="1200"
+                  data-sal-delay="300"
                 />
                 {/* <div className="camp"> */}
-                <div className="camp-info">
+                <div
+                  className="camp-info"
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1200"
+                  data-sal-delay="500"
+                >
                   <Image
                     fluid={item.image.fluid}
                     className="camp-image"
@@ -153,11 +174,22 @@ const Obozy = () => {
                     {item.description.description}
                   </p>
                 </div>
-                <h3>
+                <h3
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
+                >
                   <AiOutlineSchedule className="camp-details-icon" />
                   Program
                 </h3>
-                <div className="camp-program">
+                <div
+                  className="camp-program"
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
+                >
                   {item.program.content.map((element, index) => {
                     return (
                       <p key={index}>
@@ -167,7 +199,13 @@ const Obozy = () => {
                     )
                   })}
                 </div>
-                <div className="camp-details">
+                <div
+                  className="camp-details"
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
+                >
                   <div className="camp-details-container">
                     <h3>
                       <MdSchedule className="camp-details-icon" />
@@ -211,11 +249,22 @@ const Obozy = () => {
                     <p className="camp-price">{item.price}</p>
                   </div>
                 </div>
-                <h3>
+                <h3
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
+                >
                   <FaRegQuestionCircle className="camp-details-icon" />
                   Dostępność
                 </h3>
-                <div className="camp-availability">
+                <div
+                  className="camp-availability"
+                  data-sal="fade"
+                  data-sal-easing="ease"
+                  data-sal-duration="1000"
+                  data-sal-delay="300"
+                >
                   {item.availability.content.map((element, index) => {
                     return (
                       <p

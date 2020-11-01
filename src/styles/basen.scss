@@ -13,6 +13,7 @@
   text-align: center;
   position: relative;
   margin-top: 5rem;
+  --sal-delay: 0.3s;
 
   &-logo-container {
     position: absolute;
@@ -118,8 +119,22 @@
   .pool-info-container {
     grid-template-columns: repeat(3, 1fr);
 
-    .pool-info-icon {
-      top: 5px;
+    .pool-info {
+      &:nth-child(1) {
+        --sal-delay: 0.3s;
+      }
+
+      &:nth-child(2) {
+        --sal-delay: 0.6s;
+      }
+
+      &:nth-child(3) {
+        --sal-delay: 0.9s;
+      }
+
+      &-icon {
+        top: 5px;
+      }
     }
   }
 }
