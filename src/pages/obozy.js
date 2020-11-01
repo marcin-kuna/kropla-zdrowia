@@ -111,11 +111,7 @@ const Obozy = () => {
               </button>
             )
           })}
-          <img
-            src={CampsWaveDark}
-            alt=""
-            className="camp-wave camps-wave-nav"
-          />
+          <img src={CampsWaveDark} alt="" className="camp-wave camp-wave-nav" />
         </div>
 
         <section className="camps-container">
