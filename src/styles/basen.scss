@@ -89,11 +89,15 @@
   margin-bottom: 0.5rem;
 }
 
-.gallery-pool {
+.gallery-section-pool {
   margin-top: 5rem;
 
-  img {
-    cursor: pointer;
+  .gallery {
+    margin-top: 5rem;
+
+    img {
+      cursor: pointer;
+    }
   }
 }
 

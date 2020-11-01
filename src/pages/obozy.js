@@ -19,6 +19,8 @@ import CampsWaveDark from "../assets/images/campsWaveDark.svg"
 import CampsWaveLight from "../assets/images/campsWaveLight.svg"
 import SocialLinks from "../constants/socialLinks"
 import Head from "../components/Head"
+import Gallery from "@browniebroke/gatsby-image-gallery"
+import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
 const query = graphql`
   {
@@ -64,6 +66,18 @@ const query = graphql`
         selector
       }
     }
+    allFile(filter: { sourceInstanceName: { eq: "gallery-camps" } }) {
+      nodes {
+        childImageSharp {
+          thumb: fluid(maxWidth: 270, maxHeight: 270) {
+            ...GatsbyImageSharpFluid
+          }
+          full: fluid(maxWidth: 1024) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
   }
 `
 
@@ -73,9 +87,8 @@ const Obozy = () => {
       childImageSharp: { fluid },
     },
     allContentfulObozy: { nodes: camps },
+    allFile: { nodes: images },
   } = useStaticQuery(query)
-
-  console.log(camps)
 
   return (
     <Layout>
@@ -236,6 +249,18 @@ const Obozy = () => {
             )
           })}
         </section>
+        <div className="camps-gallery-container">
+          <section className="gallery-section-camps">
+            <h2 className="section-title">Obozy - Galeria</h2>
+            <div className="gallery">
+              <Gallery
+                images={images.map((item) => {
+                  return item.childImageSharp
+                })}
+              />
+            </div>
+          </section>
+        </div>
       </SubpageLayout>
       <SocialLinks styleClass="social-links-fixed" />
     </Layout>

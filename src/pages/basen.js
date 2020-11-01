@@ -109,9 +109,9 @@ const Basen = () => {
                         <p
                           key={index}
                           className={`${
-                            element.content[0].value === "(wolne miejsca)"
+                            element.content[0].value === "wolne miejsca"
                               ? `green`
-                              : element.content[0].value === "(brak miejsc)"
+                              : element.content[0].value === "brak miejsc"
                               ? `red`
                               : ""
                           }`}
@@ -127,13 +127,16 @@ const Basen = () => {
           })}
         </section>
         {/* <h3 className="account">Nr Konta: 84 2490 0005 0000 4600 6531 1730 </h3> */}
-        <div className="gallery-pool">
-          <Gallery
-            images={images.map((item) => {
-              return item.childImageSharp
-            })}
-          />
-        </div>
+        <section className="gallery-section-pool">
+          <h2 className="section-title">Basen - Galeria</h2>
+          <div className="gallery">
+            <Gallery
+              images={images.map((item) => {
+                return item.childImageSharp
+              })}
+            />
+          </div>
+        </section>
       </SubpageLayout>
       <SocialLinks styleClass="social-links-fixed" />
     </Layout>

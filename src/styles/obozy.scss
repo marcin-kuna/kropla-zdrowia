@@ -116,11 +116,11 @@
     }
   }
 
-  &:last-child {
-    .camp-wave {
-      display: none;
-    }
-  }
+  // &:last-child {
+  //   .camp-wave {
+  //     display: none;
+  //   }
+  // }
 
   & > * {
     position: relative;
@@ -159,7 +159,6 @@
 
   &-info {
     text-align: center;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -209,6 +208,40 @@
   margin-bottom: 0.5rem;
 }
 
+.camps-gallery-container {
+  position: relative;
+  padding-bottom: 10rem;
+  margin-bottom: -10rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10vw;
+    width: 100vw;
+    height: 100%;
+    z-index: 0;
+    background-color: $blue-3;
+  }
+
+  .gallery-section-camps {
+    position: relative;
+    z-index: 1;
+
+    .section-title {
+      padding-top: 5rem;
+    }
+
+    .gallery {
+      margin-top: 5rem;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 412px) {
   .camps-nav-separator {
     display: block;
@@ -256,7 +289,8 @@
   }
 
   .camp-wave,
-  .camp:nth-child(odd)::after {
+  .camp:nth-child(odd)::after,
+  .camps-gallery-container::after {
     left: -5vw;
   }
 
@@ -273,22 +307,18 @@
     align-items: center;
   }
 
-  .camp {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .camp-info {
     grid-template-columns: 1fr 1fr;
   }
 
-  .camp-container:nth-of-type(even) {
-    .camp {
+  .camp:nth-child(even) {
+    .camp-info {
       grid-auto-flow: dense;
       align-self: flex-end;
-    }
 
-    .camp-image {
-      grid-column: 2;
+      .camp-image {
+        grid-column: 2;
+      }
     }
   }
 }
@@ -303,15 +333,22 @@
   }
 
   .camp-wave,
-  .camp:nth-child(odd)::after {
+  .camp:nth-child(odd)::after,
+  .camps-gallery-container::after {
     left: -5vw;
+  }
+
+  .camps-gallery-container {
+    padding-bottom: 15rem;
+    margin-bottom: -15rem;
   }
 }
 
 // Dynamic position (1170px Camp width makes dynamic margin)
 @media screen and (min-width: 1287px) {
   .camp-wave,
-  .camp:nth-child(odd)::after {
+  .camp:nth-child(odd)::after,
+  .camps-gallery-container::after {
     left: calc((100vw - 1170px) / -2);
   }
 }
