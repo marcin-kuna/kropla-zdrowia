@@ -95,7 +95,7 @@ const Hero = () => {
             data-sal-easing="ease"
             data-sal-duration="1500"
           >
-            Nasze obozy to sport, przygoda, wypoczynek, to szerokie spektrum
+            Nasze obozy to sport, przygoda i wypoczynek, to szerokie spektrum
             zajęć sportowych, gier i zabaw integracyjnych i terenowych, to
             wykwalifikowana i zaangażowana kadra pozytywnie zakręconych
             instruktorów i wychowawców.

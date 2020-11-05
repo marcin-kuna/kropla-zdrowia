@@ -132,7 +132,6 @@ const Basen = () => {
             )
           })}
         </section>
-        {/* <h3 className="account">Nr Konta: 84 2490 0005 0000 4600 6531 1730 </h3> */}
         <section className="gallery-section-pool">
           <h2 className="section-title">Basen - Galeria</h2>
           <div>

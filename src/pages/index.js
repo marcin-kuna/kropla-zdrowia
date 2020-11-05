@@ -6,7 +6,6 @@ import Services from "../components/Services"
 import Testimonials from "../components/Testimonials"
 import SocialLinks from "../constants/socialLinks"
 import Head from "../components/Head"
-// import "../styles/index.scss"
 
 const Home = () => {
   return (

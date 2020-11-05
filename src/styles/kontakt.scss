@@ -33,7 +33,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // font-size: 3rem;
     color: $blue-2;
   }
 
@@ -106,12 +105,14 @@ textarea {
 }
 
 .submit-btn {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: $radius;
   outline: none;
   height: 3.5rem;
   width: 50%;
-  // min-width: 200px;
+  min-width: 200px;
   background-color: $yellow-4;
   color: $white;
   cursor: pointer;
@@ -123,10 +124,6 @@ textarea {
   letter-spacing: 0.1rem;
   transition: $transition;
   border: solid 3px transparent;
-
-  span {
-    margin: auto;
-  }
 }
 
 .submit-btn:hover {

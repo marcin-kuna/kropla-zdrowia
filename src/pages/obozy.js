@@ -270,8 +270,6 @@ const Obozy = () => {
                     )
                   })}
                 </div>
-
-                {/* </div> */}
                 <img
                   src={CampsWaveDark}
                   alt=""
