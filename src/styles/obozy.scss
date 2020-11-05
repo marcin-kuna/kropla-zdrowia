@@ -168,25 +168,13 @@
   }
 
   &-details {
-    margin: 2rem auto;
+    margin: 3rem auto;
 
     &-icon {
       margin-right: 0.5rem;
       position: relative;
       top: 3px;
       color: $yellow-4;
-    }
-  }
-
-  &-program {
-    margin-top: 2rem;
-
-    p {
-      margin-top: 0.5rem;
-
-      &:last-child {
-        display: none;
-      }
     }
   }
 
@@ -210,21 +198,22 @@
   margin-bottom: 0.5rem;
 }
 
+// Even no. of camps
 .camps-gallery-container {
-  position: relative;
-  padding-bottom: 10rem;
-  margin-bottom: -10rem;
+  // position: relative;
+  // padding-bottom: 10rem;
+  // margin-bottom: -10rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -10vw;
-    width: 100vw;
-    height: 100%;
-    z-index: 0;
-    background-color: $blue-3;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: -10vw;
+  //   width: 100vw;
+  //   height: 100%;
+  //   z-index: 0;
+  //   background-color: $blue-3;
+  // }
 
   .gallery-section-camps {
     position: relative;
@@ -254,11 +243,12 @@
 
 @media screen and (min-width: 768px) {
   .camps-nav {
+    grid-template-columns: repeat(3, 1fr);
     padding-bottom: 10rem;
 
     &-name {
       line-height: 1.2;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     &-separator {
@@ -279,7 +269,8 @@
 
 @media screen and (min-width: 992px) {
   .camps-nav {
-    grid-template-columns: repeat(4, 1fr);
+    padding-right: 10%;
+    padding-left: 10%;
 
     &-btn {
       &:nth-child(1) {
@@ -311,7 +302,7 @@
     }
 
     &-name {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     &-separator {
@@ -369,9 +360,10 @@
     left: -5vw;
   }
 
+  // Even no. of camps
   .camps-gallery-container {
-    padding-bottom: 15rem;
-    margin-bottom: -15rem;
+    // padding-bottom: 15rem;
+    // margin-bottom: -15rem;
   }
 }
 

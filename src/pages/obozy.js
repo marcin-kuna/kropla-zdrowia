@@ -7,14 +7,13 @@ import WaveSeparator from "../assets/images/wave-long.svg"
 import WaveSeparatorYellow from "../assets/images/wave-long-yellow.svg"
 import "../styles/obozy.scss"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { MdLocationOn, MdSchedule, MdRestaurant, MdCheck } from "react-icons/md"
+import { MdLocationOn, MdSchedule, MdRestaurant } from "react-icons/md"
 import {
   FaHome,
   FaRegMoneyBillAlt,
   FaBusAlt,
   FaRegQuestionCircle,
 } from "react-icons/fa"
-import { AiOutlineSchedule } from "react-icons/ai"
 import CampsWaveDark from "../assets/images/campsWaveDark.svg"
 import CampsWaveLight from "../assets/images/campsWaveLight.svg"
 import SocialLinks from "../constants/socialLinks"
@@ -54,13 +53,6 @@ const query = graphql`
         location
         name
         price
-        program {
-          content {
-            content {
-              value
-            }
-          }
-        }
         transport
         contentfulid
         selector
@@ -166,29 +158,6 @@ const Obozy = () => {
                   <p className="camp-description">
                     {item.description.description}
                   </p>
-                </div>
-                <h3
-                  data-sal="fade"
-                  data-sal-easing="ease"
-                  data-sal-duration="1000"
-                >
-                  <AiOutlineSchedule className="camp-details-icon" />
-                  Program
-                </h3>
-                <div
-                  className="camp-program"
-                  data-sal="fade"
-                  data-sal-easing="ease"
-                  data-sal-duration="1000"
-                >
-                  {item.program.content.map((element, index) => {
-                    return (
-                      <p key={index}>
-                        <MdCheck className="camp-details-icon" />
-                        {element.content[0].value}
-                      </p>
-                    )
-                  })}
                 </div>
                 <div
                   className="camp-details"
