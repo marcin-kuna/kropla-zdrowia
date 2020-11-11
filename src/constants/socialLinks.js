@@ -25,7 +25,7 @@ const data = [
         aria-label="Instagram"
       ></FaInstagramSquare>
     ),
-    url: "https://www.facebook.com/kroplazdrowiaradom",
+    url: "https://www.instagram.com/kroplazdrowia_obozy/",
   },
   {
     id: 3,

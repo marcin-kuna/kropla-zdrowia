@@ -23,7 +23,7 @@ import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "obozy.jpg" }) {
+    file(relativePath: { eq: "obozy-test8.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           ...GatsbyImageSharpFluid
