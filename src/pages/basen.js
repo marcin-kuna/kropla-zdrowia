@@ -134,7 +134,7 @@ const Basen = () => {
         </section>
         <section className="gallery-section-pool">
           <h2 className="section-title">Basen - Galeria</h2>
-          <div>
+          <div className="gallery">
             <Gallery
               images={images.map((item) => {
                 return item.childImageSharp
