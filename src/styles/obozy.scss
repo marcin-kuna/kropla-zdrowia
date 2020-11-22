@@ -117,13 +117,6 @@
     }
   }
 
-  // No gallery version
-  // &:last-child {
-  //   .camp-wave {
-  //     display: none;
-  //   }
-  // }
-
   & > * {
     position: relative;
     z-index: 1;
@@ -364,10 +357,10 @@
   }
 
   // Even no. of camps
-  .camps-gallery-container {
-    // padding-bottom: 15rem;
-    // margin-bottom: -15rem;
-  }
+  // .camps-gallery-container {
+  // padding-bottom: 15rem;
+  // margin-bottom: -15rem;
+  // }
 }
 
 // Dynamic position (1170px Camp width makes dynamic margin)
