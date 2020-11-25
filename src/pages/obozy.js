@@ -114,11 +114,6 @@ const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        siteUrl
-      }
-    }
   }
 `
 
@@ -129,7 +124,6 @@ const Obozy = () => {
     },
     allContentfulObozy: { nodes: camps },
     allFile: { nodes: images },
-    site: { siteMetadata },
   } = useStaticQuery(query)
 
   return (
@@ -141,7 +135,9 @@ const Obozy = () => {
             Obozy sportowe i rekreacyjne
           </h2>
           <h3>Realizujemy bony turystyczne!</h3>
-          <a href={`${siteMetadata.siteUrl}/basen.jpg`}>Basen</a>
+          <a href="/basen.jpg" download>
+            Dokumenty do pobrania
+          </a>
         </div>
 
         <div className="camps-nav">
