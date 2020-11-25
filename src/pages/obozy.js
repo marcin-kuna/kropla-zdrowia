@@ -7,12 +7,18 @@ import WaveSeparator from "../assets/images/wave-long.svg"
 import WaveSeparatorYellow from "../assets/images/wave-long-yellow.svg"
 import "../styles/obozy.scss"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { MdLocationOn, MdSchedule, MdRestaurant } from "react-icons/md"
+import {
+  MdChildCare,
+  MdLocationOn,
+  MdSchedule,
+  MdRestaurant,
+} from "react-icons/md"
 import {
   FaHome,
   FaRegMoneyBillAlt,
   FaBusAlt,
   FaRegQuestionCircle,
+  FaAmbulance,
 } from "react-icons/fa"
 import CampsWaveDark from "../assets/images/campsWaveDark.svg"
 import CampsWaveLight from "../assets/images/campsWaveLight.svg"
@@ -32,7 +38,13 @@ const query = graphql`
     }
     allContentfulObozy(sort: { fields: contentfulid, order: ASC }) {
       nodes {
-        accommodation
+        accommodation {
+          content {
+            content {
+              value
+            }
+          }
+        }
         availability {
           content {
             content {
@@ -40,22 +52,54 @@ const query = graphql`
             }
           }
         }
-        date
+        date {
+          content {
+            content {
+              value
+            }
+          }
+        }
         description {
           description
         }
-        food
+        food {
+          content {
+            content {
+              value
+            }
+          }
+        }
         image {
           fluid(quality: 100) {
             ...GatsbyContentfulFluid
           }
         }
-        location
+        location {
+          content {
+            content {
+              value
+            }
+          }
+        }
         name
-        price
-        transport
+        price {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        transport {
+          content {
+            content {
+              value
+            }
+          }
+        }
         contentfulid
         selector
+        age
+        insurance
       }
     }
     allFile(filter: { sourceInstanceName: { eq: "gallery-camps" } }) {
@@ -70,6 +114,11 @@ const query = graphql`
         }
       }
     }
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
   }
 `
 
@@ -80,15 +129,20 @@ const Obozy = () => {
     },
     allContentfulObozy: { nodes: camps },
     allFile: { nodes: images },
+    site: { siteMetadata },
   } = useStaticQuery(query)
 
   return (
     <Layout>
       <Head title="Obozy" />
       <SubpageLayout image={fluid} heading="Oferta – Obozy">
-        <h2 className="camps-title section-title">
-          Obozy sportowe i rekreacyjne
-        </h2>
+        <div className="camps-title-container">
+          <h2 className="camps-title section-title">
+            Obozy sportowe i rekreacyjne
+          </h2>
+          <h3>Realizujemy bony turystyczne!</h3>
+          <a href={`${siteMetadata.siteUrl}/basen.jpg`}>Basen</a>
+        </div>
 
         <div className="camps-nav">
           {camps.map((item) => {
@@ -167,45 +221,107 @@ const Obozy = () => {
                 >
                   <div className="camp-details-container">
                     <h3>
+                      <MdChildCare className="camp-details-icon" />
+                      Wiek
+                    </h3>
+                    <p className="camp-age">{item.age}</p>
+                  </div>
+                  <div className="camp-details-container">
+                    <h3>
                       <MdSchedule className="camp-details-icon" />
                       Termin
                     </h3>
-                    <p className="camp-date">{item.date}</p>
+                    <div className="camp-wrapper">
+                      {item.date.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-date">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
                   </div>
                   <div className="camp-details-container">
                     <h3>
                       <MdLocationOn className="camp-details-icon" />
                       Miejsce
                     </h3>
-                    <p className="camp-location">{item.location}</p>
+                    <div className="camp-wrapper">
+                      {item.location.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-location">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
                   </div>
                   <div className="camp-details-container">
                     <h3>
                       <FaHome className="camp-details-icon" />
                       Zakwaterowanie
                     </h3>
-                    <p className="camp-accomodation">{item.accommodation}</p>
+                    <div className="camp-wrapper">
+                      {item.accommodation.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-accommodation">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
                   </div>
                   <div className="camp-details-container">
                     <h3>
                       <MdRestaurant className="camp-details-icon" />
                       Wyżywienie
                     </h3>
-                    <p className="camp-food">{item.food}</p>
+                    <div className="camp-wrapper">
+                      {item.food.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-food">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
                   </div>
                   <div className="camp-details-container">
                     <h3>
                       <FaBusAlt className="camp-details-icon" />
                       Transport
                     </h3>
-                    <p className="camp-transport">{item.transport}</p>
+                    <div className="camp-wrapper">
+                      {item.transport.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-transport">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  <div className="camp-details-container">
+                    <h3>
+                      <FaAmbulance className="camp-details-icon" />
+                      Ubezpieczenie
+                    </h3>
+                    <p className="camp-insurance">{item.insurance}</p>
                   </div>
                   <div className="camp-details-container">
                     <h3>
                       <FaRegMoneyBillAlt className="camp-details-icon" />
                       Cena
                     </h3>
-                    <p className="camp-price">{item.price}</p>
+                    <div className="camp-wrapper">
+                      {item.price.content.map((element, index) => {
+                        return (
+                          <p key={index} className="camp-price">
+                            {element.content[0].value}
+                          </p>
+                        )
+                      })}
+                    </div>
                   </div>
                 </div>
                 <h3

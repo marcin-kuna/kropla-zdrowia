@@ -119,6 +119,9 @@ const Basen = () => {
                               ? `green`
                               : element.content[0].value === "brak miejsc"
                               ? `red`
+                              : element.content[0].value ===
+                                "zajęcia wstrzymane do odwołania!"
+                              ? `red`
                               : ""
                           }`}
                         >
