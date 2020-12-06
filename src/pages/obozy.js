@@ -134,6 +134,17 @@ const Obozy = () => {
           <h2 className="camps-title section-title">
             Obozy sportowe i rekreacyjne
           </h2>
+          <div className="camps-booking-info">
+            <h3>Rezerwacji obozu można dokonać:</h3>
+            <h4>Telefonicznie: 603 952 902</h4>
+            <h4>Przez formularz kontaktowy naszej strony</h4>
+            <h4>Mailowo: kroplazdrowia.obozy@gmail.com</h4>
+            <h4>
+              Do 3 dni od dokonania rezerwacji należy wpłacić zaliczkę w
+              wysokości 450zł
+            </h4>
+            <h4>(brak zaliczki powoduje wygaśnięcie rezerwacji)</h4>
+          </div>
           <h3>Realizujemy bony turystyczne!</h3>
           <a href="/basen.jpg" download>
             Dokumenty do pobrania
