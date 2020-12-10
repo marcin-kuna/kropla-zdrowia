@@ -5,3 +5,4 @@
 2. Spinning btn into component
 3. Unify core & layout
 4. POSTPRODUCTION - gatsby-config metadata siteUrl UPDATE!
+5. HEAD check

@@ -12,11 +12,13 @@ const Footer = () => {
           <p>Kropla Zdrowia</p>
           <p>ul. Focha 13/21</p>
           <p>26-600 Radom</p>
+          <p>(+48) 603 952 902</p>
         </div>
         <div className="footer-info">
-          <p>(+48) 603 952 902</p>
           <p>NIP: 796-226-16-70</p>
           <p>REGON: 672877464</p>
+          <p>Rejestr Organizatorów Turystyki:</p>
+          <p>Nr wpisu 2307 | Nr ewidencyjny 26131</p>
           <p>Konto: 84 2490 0005 0000 4600 6531 1730</p>
         </div>
         <SocialLinks styleClass="footer-links"></SocialLinks>

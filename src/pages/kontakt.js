@@ -10,7 +10,7 @@ import Head from "../components/Head"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "contact2.jpg" }) {
+    file(relativePath: { eq: "contact.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           ...GatsbyImageSharpFluid

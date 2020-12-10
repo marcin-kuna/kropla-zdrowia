@@ -26,6 +26,7 @@ import SocialLinks from "../constants/socialLinks"
 import Head from "../components/Head"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
+import { Link } from "gatsby"
 
 const query = graphql`
   {
@@ -144,11 +145,12 @@ const Obozy = () => {
               wysokości 450zł
             </h4>
             <h4>(brak zaliczki powoduje wygaśnięcie rezerwacji)</h4>
+            <Link to="/faq">FAQ</Link>
+            <a href="/basen.jpg" download className="camps-documents">
+              Dokumenty do pobrania
+            </a>
           </div>
           <h3>Realizujemy bony turystyczne!</h3>
-          <a href="/basen.jpg" download>
-            Dokumenty do pobrania
-          </a>
         </div>
 
         <div className="camps-nav">

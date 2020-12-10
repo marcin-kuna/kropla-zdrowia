@@ -1,0 +1,21 @@
+@import "core";
+
+.faq {
+  text-align: center;
+  text-transform: uppercase;
+
+  &-container {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    letter-spacing: 0.1rem;
+    // color: $yellow-4;
+    margin-bottom: 5rem;
+  }
+
+  &-question {
+    color: $yellow-4;
+    letter-spacing: 0.1rem;
+  }
+}
