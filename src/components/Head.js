@@ -21,6 +21,10 @@ const Head = ({ title }) => {
 
   return (
     <Helmet>
+      <meta property="og:title" content={`${title} | ${siteMetadata.title}`} />
+      <meta property="og:description" content={siteMetadata.description} />
+      <meta property="og:image" content={`${siteMetadata.siteUrl}/basen.jpg`} />
+      <meta property="og:url" content={siteMetadata.siteUrl} />
       <html lang="pl" />
       <title>{`${title} | ${siteMetadata.title}`}</title>
       <meta name="description" content={siteMetadata.description} />
@@ -28,10 +32,6 @@ const Head = ({ title }) => {
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
-      <meta property="og:title" content={`${title} | ${siteMetadata.title}`} />
-      <meta property="og:description" content={siteMetadata.description} />
-      <meta property="og:image" content={`${siteMetadata.siteUrl}/basen.jpg`} />
-      <meta property="og:url" content={siteMetadata.siteUrl} />
     </Helmet>
   )
 }
