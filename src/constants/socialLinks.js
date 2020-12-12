@@ -35,7 +35,7 @@ const data = [
         aria-label="Youtube"
       ></FaYoutubeSquare>
     ),
-    url: "https://www.facebook.com/kroplazdrowiaradom",
+    url: "https://www.youtube.com/channel/UCkpAPBlJBRWB42gxXJTaiZw/",
   },
   // {
   //   id: 4,

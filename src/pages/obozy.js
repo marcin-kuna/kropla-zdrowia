@@ -30,7 +30,7 @@ import { Link } from "gatsby"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "obozy-test8.jpg" }) {
+    file(relativePath: { eq: "obozy.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4000) {
           ...GatsbyImageSharpFluid
@@ -146,7 +146,11 @@ const Obozy = () => {
             </h4>
             <h4>(brak zaliczki powoduje wygaśnięcie rezerwacji)</h4>
             <Link to="/faq">FAQ</Link>
-            <a href="/basen.jpg" download className="camps-documents">
+            <a
+              href="/Kropla Zdrowia - dokumenty.zip"
+              download
+              className="camps-documents"
+            >
               Dokumenty do pobrania
             </a>
           </div>

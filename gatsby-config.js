@@ -14,7 +14,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     title: `Kropla Zdrowia`,
-    siteUrl: `https://www.kropla-zdrowia.netlify.app`,
+    siteUrl: `https://kroplazdrowia.com/`,
     description: `Zobacz bogatą ofertę obozów letnich dla dzieci (m.in. obóz żeglarski, językowy, kolonie dla najmłodszych) oraz zajęć na basenie (szkółka pływacka).`,
   },
   plugins: [
