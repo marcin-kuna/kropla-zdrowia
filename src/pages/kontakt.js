@@ -45,7 +45,7 @@ const Kontakt = () => {
               </p>
               <p>
                 <MdEmail className="contact-info-icon" />
-                email@email.com
+                kroplazdrowia.obozy@gmail.com
               </p>
               <p>
                 <FaPiggyBank className="contact-info-icon" />
