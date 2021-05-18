@@ -43,6 +43,7 @@ const Kontakt = () => {
                 <FaPhone className="contact-info-icon" />
                 (+48) 603 952 902
               </p>
+              
               <p>
                 <MdEmail className="contact-info-icon" />
                 kroplazdrowia.obozy@gmail.com

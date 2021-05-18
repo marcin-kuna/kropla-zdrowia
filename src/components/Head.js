@@ -32,6 +32,7 @@ const Head = ({ title }) => {
       <meta property="og:description" content={siteMetadata.description} />
       <meta property="og:image" content={`${siteMetadata.siteUrl}/1.jpg`} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
+      <script src="https://kroplazdrowia.skaleo.pl/wp-content/themes/skaleo/js/iframeResizer.min.js?v=1.7"></script>
     </Helmet>
   )
 }

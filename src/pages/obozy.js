@@ -363,7 +363,7 @@ const Obozy = () => {
                             : ""
                         }`}
                       >
-                        {element.content[0].value}
+                        <span dangerouslySetInnerHTML={{__html: element.content[0].value}} />
                       </p>
                     )
                   })}
