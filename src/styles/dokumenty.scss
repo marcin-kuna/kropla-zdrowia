@@ -1,0 +1,26 @@
+@import "core";
+
+.documents {
+  text-transform: uppercase;
+
+  &-container {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    letter-spacing: 0.1rem;
+    margin-bottom: 5rem;
+  }
+
+  &-heading {
+    text-align: center;
+    color: $yellow-4;
+    letter-spacing: 0.1rem;
+    margin-top: 0.75rem;
+  }
+
+  ol li {
+    font-family: $ff-secondary;
+    text-transform: none;
+  }
+}

@@ -20,7 +20,7 @@
 
   &-copy {
     margin: 0;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +45,23 @@
   &-logo {
     width: 180px;
     opacity: 0.8;
+  }
+
+  &-documents-nav {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-family: $ff-secondary;
+      color: $white;
+      transition: $transition;
+      padding-bottom: 0.3rem;
+
+      &:hover {
+        color: $blue-1;
+      }
+    }
   }
 }
 
@@ -80,6 +97,17 @@
   .footer-center {
     grid-template-columns: repeat(4, 1fr);
     padding-top: 0;
+  }
+
+  .footer-documents-nav {
+    margin: 0 auto;
+    width: 600px;
+    justify-content: space-between;
+    flex-direction: row;
+
+    a {
+      padding-bottom: 0;
+    }
   }
 }
 

@@ -2,6 +2,7 @@ import React from "react"
 import SocialLinks from "../constants/socialLinks"
 import "../styles/footer.scss"
 import Logo from "../assets/images/logoWhite.svg"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -22,6 +23,11 @@ const Footer = () => {
           <p>Konto: 84 2490 0005 0000 4600 6531 1730</p>
         </div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
+      </div>
+      <div className="footer-documents-nav">
+        <Link to="/regulamin-serwisu">Regulamin serwisu</Link>
+        <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
+        <Link to="/warunki-uczestnictwa">Warunki uczestnictwa</Link>
       </div>
       <div className="footer-copy">
         <p>
