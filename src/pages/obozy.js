@@ -142,7 +142,7 @@ const Obozy = () => {
             <h4>Mailowo: kroplazdrowia.obozy@gmail.com</h4>
             <h4>
               Do 3 dni od dokonania rezerwacji należy wpłacić zaliczkę w
-              wysokości 450zł
+              wysokości 690zł
             </h4>
             <h4>(brak zaliczki powoduje wygaśnięcie rezerwacji)</h4>
             <Link to="/faq">FAQ</Link>
@@ -363,7 +363,11 @@ const Obozy = () => {
                             : ""
                         }`}
                       >
-                        <span dangerouslySetInnerHTML={{__html: element.content[0].value}} />
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: element.content[0].value,
+                          }}
+                        />
                       </p>
                     )
                   })}
